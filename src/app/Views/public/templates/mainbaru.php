@@ -32,12 +32,6 @@
     .leaflet-map {
         height: 470px;
     }
-
-    @media (max-width: 768px) {
-        .card-body.text-center {
-            flex: 0 0 100%;
-        }
-    }
     </style>
 </head>
 
@@ -192,8 +186,8 @@
 
             <div id="scrollbar">
                 <div class="container-fluid">
-                    <div id="two-column-menu" class="mt-2 d-flex flex-wrap">
-                        <div class="card-body text-center" style="flex: 0 0 50%;">
+                    <div id="two-column-menu" class="mt-2 d-flex flex-wrap justify-content-center">
+                        <div class="card-body text-center" style="flex:0 0 50%;">
                             <div class="mx-auto">
                                 <img src="<?= base_url('dist/') ?>assets/images/logo_desa_talaga.png" alt=""
                                     width="50px" class="img-thumbnail rounded-circle shadow-none">
@@ -201,7 +195,16 @@
                             <p class="text-light mt-0">Profil Desa Talaga Wetan</p>
                         </div>
 
-                        <div class="card-body text-center" style="flex: 0 0 50%;">
+                        <div class="card-body text-center" style="flex:0 0 50%;">
+                            <div class="mx-auto">
+                                <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
+                                    class="img-thumbnail rounded-circle shadow-none">
+                            </div>
+                            <p class="text-light mt-0">Profil Desa Talaga Ketan</p>
+                        </div>
+
+
+                        <div class="card-body text-center" style="flex:0 0 50%;">
                             <div class="mx-auto">
                                 <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
                                     class="img-thumbnail rounded-circle shadow-none">
@@ -209,8 +212,7 @@
                             <p class="text-light mt-0">Tonya Noble</p>
                         </div>
 
-
-                        <div class="card-body text-center" style="flex: 0 0 50%;">
+                        <div class="card-body text-center" style="flex:0 0 50%;">
                             <div class="mx-auto">
                                 <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
                                     class="img-thumbnail rounded-circle shadow-none">
@@ -218,15 +220,7 @@
                             <p class="text-light mt-0">Tonya Noble</p>
                         </div>
 
-                        <div class="card-body text-center" style="flex: 0 0 50%;">
-                            <div class="mx-auto">
-                                <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
-                                    class="img-thumbnail rounded-circle shadow-none">
-                            </div>
-                            <p class="text-light mt-0">Tonya Noble</p>
-                        </div>
-
-                        <div class="card-body text-center" style="flex: 0 0 50%;">
+                        <div class="card-body text-center" style="flex:0 0 50%;">
                             <div class="mx-auto">
                                 <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
                                     class="img-thumbnail rounded-circle shadow-none">
@@ -537,7 +531,6 @@
             <i class='mdi mdi-spin mdi-cog-outline fs-22'></i>
         </div>
     </div>
-
 
     <!-- JAVASCRIPT -->
     <script src="<?= base_url('dist/') ?>assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
