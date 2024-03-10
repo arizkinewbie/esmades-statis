@@ -16,7 +16,7 @@
                 <img src="<?= base_url('dist/') ?>assets/images/logo-sm.png" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="<?= base_url('dist/') ?>assets/images/logo-light.png" class="mt-2 mb-2" alt="" height="80">
+                <img src="<?= base_url('dist/') ?>assets/images/logo-light.png" class="mt-2 mb-2" alt="" height="50">
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
