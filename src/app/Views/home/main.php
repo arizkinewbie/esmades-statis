@@ -74,7 +74,7 @@
         <div class="vertical-overlay"></div>
 
         <!-- Content -->
-        <?= view('home/profil') ?>
+        <?= view('/home/' . $content) ?>
         <!-- End Content -->
 
         <!-- END layout-wrapper -->
