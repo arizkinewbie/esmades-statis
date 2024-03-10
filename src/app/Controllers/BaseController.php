@@ -71,7 +71,7 @@ abstract class BaseController extends Controller
     protected function render($data = [])
     {
         // Load main
-        $main = view('public/templates/main', $data);
+        $main = view('public/templates/mainbaru', $data);
         return $main;
     }
     protected function request($data = [])
