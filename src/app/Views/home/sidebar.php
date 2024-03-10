@@ -19,7 +19,8 @@
                 <img src="<?= base_url('dist/') ?>assets/images/logo-light.png" class="mt-2 mb-2" alt="" height="80">
             </span>
         </a>
-        <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+        <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+            id="vertical-hover">
             <i class="ri-record-circle-line"></i>
         </button>
     </div>
@@ -27,102 +28,120 @@
     <div id="scrollbar">
         <div class="container-fluid">
             <div id="two-column-menu" class="mt-2 d-flex flex-wrap justify-content-center">
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="" class="card-body text-center">
                     <div class="mx-auto">
-                        <img src="<?= base_url('dist/') ?>assets/images/logo_desa_talaga.png" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
+                        <img src="<?= base_url('dist/') ?>assets/images/logo_desa_talaga.png" alt="" width="50px"
+                            class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Profil Desa Talaga Wetan</p>
-                </div>
+                </a>
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
-                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
+                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
+                            class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Kepala Desa</p>
-                </div>
+                </a>
 
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
-                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
+                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
+                            class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Struktur Organisasi</p>
-                </div>
+                </a>
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
-                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
+                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
+                            class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Kelembagaan</p>
-                </div>
+                </a>
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
-                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
+                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
+                            class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Galeri</p>
-                </div>
+                </a>
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
-                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
+                        <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px"
+                            class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Kabar Desa</p>
-                </div>
+                </a>
             </div>
 
 
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title"><span data-key="t-menu">Peta Desa</span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?= base_url('aset-desa') ?>" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link menu-link" href="<?= base_url('aset-desa') ?>" role="button"
+                        aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class="ri-home-3-line"></i> <span data-key="t-layouts">Aset Desa</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?= base_url('tanah-desa') ?>" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link menu-link" href="<?= base_url('tanah-desa') ?>" role="button"
+                        aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class="ri-flood-line"></i> <span data-key="t-layouts">Tanah Desa</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?= base_url('kependudukan') ?>" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                        <i class="ri-map-pin-user-line"></i> <span data-key="t-layouts">Kependudukan</span> <span class="badge badge-pill bg-danger" data-key="t-hot">Baru</span>
+                    <a class="nav-link menu-link" href="<?= base_url('kependudukan') ?>" role="button"
+                        aria-expanded="false" aria-controls="sidebarLayouts">
+                        <i class="ri-map-pin-user-line"></i> <span data-key="t-layouts">Kependudukan</span> <span
+                            class="badge badge-pill bg-danger" data-key="t-hot">Baru</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?= base_url('cagar-budaya') ?>" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link menu-link" href="<?= base_url('cagar-budaya') ?>" role="button"
+                        aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class="ri-earth-line"></i> <span data-key="t-layouts">Cagar Budaya</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="<?= base_url('objek-wisata') ?>" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link menu-link" href="<?= base_url('objek-wisata') ?>" role="button"
+                        aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class="ri-ship-2-line"></i> <span data-key="t-layouts">Objek Wisata</span>
                     </a>
                 </li> <!-- end Dashboard Menu -->
 
                 <li class="menu-title"><span data-key="t-menu">Rekapitulasi Data</span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false"
+                        aria-controls="sidebarLayouts">
                         <i class="ri-home-3-line"></i> <span data-key="t-layouts">Aset Desa</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false"
+                        aria-controls="sidebarLayouts">
                         <i class="ri-flood-line"></i> <span data-key="t-layouts">Tanah Desa</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                        <i class="ri-map-pin-user-line"></i> <span data-key="t-layouts">Kependudukan</span> <span class="badge badge-pill bg-danger" data-key="t-hot">Baru</span>
+                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false"
+                        aria-controls="sidebarLayouts">
+                        <i class="ri-map-pin-user-line"></i> <span data-key="t-layouts">Kependudukan</span> <span
+                            class="badge badge-pill bg-danger" data-key="t-hot">Baru</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false"
+                        aria-controls="sidebarLayouts">
                         <i class="ri-earth-line"></i> <span data-key="t-layouts">Cagar Budaya</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link menu-link" href="#sidebarLayouts" role="button" aria-expanded="false"
+                        aria-controls="sidebarLayouts">
                         <i class="ri-ship-2-line"></i> <span data-key="t-layouts">Objek Wisata</span>
                     </a>
                 </li>
