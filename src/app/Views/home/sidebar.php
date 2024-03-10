@@ -34,7 +34,7 @@
                     <p class="text-light mt-0">Profil Desa Talaga Wetan</p>
                 </a>
 
-                <a href="<?= base_url('kepala-desa') ?>" class="card-body text-center" style="flex:0 0 50%;">
+                <a href="<?= base_url('profil') ?>" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
                         <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
                     </div>
