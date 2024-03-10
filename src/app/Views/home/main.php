@@ -73,10 +73,10 @@
         <!-- Vertical Overlay-->
         <div class="vertical-overlay"></div>
 
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <?= view('home/aset-desa') ?>
+        <!-- Content -->
+        <?= view('home/profil') ?>
+        <!-- End Content -->
+
         <!-- END layout-wrapper -->
 
 
