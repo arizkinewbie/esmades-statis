@@ -28,7 +28,6 @@ class Home extends BaseController
             $profileData = json_decode($response->getBody(), true);
             $data = [
                 'title' => 'Beranda | ' . getenv('APP_NAME'),
-                'view' => $this->var['viewPath'] . 'index',
             ];
             $data = array_merge($data, $profileData[0]);
             return $this->render($data);
