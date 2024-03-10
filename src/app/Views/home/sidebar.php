@@ -27,48 +27,48 @@
     <div id="scrollbar">
         <div class="container-fluid">
             <div id="two-column-menu" class="mt-2 d-flex flex-wrap justify-content-center">
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="<?= base_url('profil') ?>" class="card-body text-center">
                     <div class="mx-auto">
                         <img src="<?= base_url('dist/') ?>assets/images/logo_desa_talaga.png" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Profil Desa Talaga Wetan</p>
-                </div>
+                </a>
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="<?= base_url('kepala-desa') ?>" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
                         <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Kepala Desa</p>
-                </div>
+                </a>
 
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="<?= base_url('struktur-organisasi') ?>" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
                         <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Struktur Organisasi</p>
-                </div>
+                </a>
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="<?= base_url('kelembagaan') ?>" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
                         <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Kelembagaan</p>
-                </div>
+                </a>
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="<?= base_url('galeri') ?>" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
                         <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Galeri</p>
-                </div>
+                </a>
 
-                <div class="card-body text-center" style="flex:0 0 50%;">
+                <a href="<?= base_url('kabar-desa') ?>" class="card-body text-center" style="flex:0 0 50%;">
                     <div class="mx-auto">
                         <img src="<?= base_url('dist/') ?>assets/images/users/avatar-10.jpg" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
                     </div>
                     <p class="text-light mt-0">Kabar Desa</p>
-                </div>
+                </a>
             </div>
 
 
