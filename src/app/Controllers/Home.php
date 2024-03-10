@@ -8,31 +8,37 @@ class Home extends BaseController
     protected $apiDomain;
     protected $token;
 
-
     public function __construct()
     {
         $this->var['viewPath'] = 'home/';
         $this->apiDomain = getenv('API_DOMAIN');
     }
 
-    public function index()
+    public function index($path = null)
     {
+        if ($path === null) {
+            $content = 'profil';
+        } else {
+            $content = $path;
+        }
+
+        //Get DATA from API
         $this->setJwtToken();
-        //Get Profile
         $dataRequest = [
             'method' => 'GET',
             'api_path' => '/api/profil?desa_id=29198',
         ];
         $response = $this->request($dataRequest);
         if ($response->getStatusCode() == 200) {
-            $profileData = json_decode($response->getBody(), true);
-            $data = [
-                'title' => 'Beranda | ' . getenv('APP_NAME'),
-            ];
-            $data = array_merge($data, $profileData[0]);
-            return $this->render($data);
+            $ContentData = json_decode($response->getBody(), true);
         } else {
             return $this->notFound('Halaman tidak ditemukan!');
         }
+        $data = [
+            'title' => 'Beranda | ' . getenv('APP_NAME'),
+            'content' => $content,
+        ];
+        $data = array_merge($data, $ContentData[0]);
+        return $this->render($data);
     }
 }

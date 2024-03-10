@@ -6,6 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+$routes->get('/(:segment)', 'Home::index/$1');
 
 $routes->group('admin', ['namespace' => 'App\Controllers\Cms'], function ($routes) {
     // Routes inside the 'admin' group with controllers in the 'Admin' namespace
