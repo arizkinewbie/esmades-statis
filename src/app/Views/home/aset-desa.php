@@ -158,8 +158,4 @@
         </div>
         <!-- container-fluid -->
     </div>
-    <!-- End Page-content -->
-    <?= $this->include('home/footer') ?>
-    <!-- end main content-->
-
 </div>
