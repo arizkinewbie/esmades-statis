@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
 
 <head>
 
@@ -28,20 +29,20 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 
     <style>
-        .leaflet-map {
-            height: 470px;
-        }
+    .leaflet-map {
+        height: 470px;
+    }
 
-        .card-body.text-center {
-            flex: 0 0 50%;
-            transition: transform 0.3s;
-            /* Transisi agar perubahan skala terlihat mulus */
-        }
+    .card-body.text-center {
+        flex: 0 0 50%;
+        transition: transform 0.3s;
+        /* Transisi agar perubahan skala terlihat mulus */
+    }
 
-        .card-body.text-center:hover {
-            transform: scale(1.1);
-            /* Perbesar elemen saat dihover */
-        }
+    .card-body.text-center:hover {
+        transform: scale(1.1);
+        /* Perbesar elemen saat dihover */
+    }
     </style>
 </head>
 
@@ -58,11 +59,13 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="NotificationModalbtn-close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            id="NotificationModalbtn-close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mt-2 text-center">
-                            <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+                            <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
+                                colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
                             <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
                                 <h4>Are you sure ?</h4>
                                 <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
@@ -129,10 +132,17 @@
         <!-- App js -->
         <script src="<?= base_url('dist/') ?>assets/js/app.js"></script>
 
-        <!-- Bootstrap JS -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
+        <!-- Icon di Maps -->
+        <script>
+        // Mendapatkan elemen div dengan kelas "leaflet-pane leaflet-marker-pane"
+        var markerDiv = document.querySelector('.leaflet-pane.leaflet-marker-pane');
+
+        // Mendapatkan elemen img di dalam div tersebut
+        var markerImg = markerDiv.querySelector('img');
+
+        // Mengubah nilai atribut src dari tag img
+        markerImg.src = '<?= base_url('dist/') ?>assets/images/logo-sm.png';
+        </script>
 
 </body>
 

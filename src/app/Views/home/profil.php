@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header d-flex align-items-center flex-wrap">
-                    <h4 class="card-title mb-0 me-auto">Profil</h4>
+                    <h2 class="mb-0">Profil</h2>
                 </div><!-- end card header -->
                 <div class="card-body">
                     <h6 class="fs-15">Sejarah</h6>

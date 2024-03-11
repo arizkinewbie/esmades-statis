@@ -35,70 +35,75 @@
    </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class="container-fluid py-5 mx-5" style="padding-left: 120px; margin-top: 50px;">
+<div class="container-fluid py-5 mx-2" style="padding-left: 15px; padding-right: 15px; margin-top: 45px;">
    <div class="row justify-content-center">
-      <div class="col-md-12 text-center">
-         <h2>Kelembagaan</h2>
-         <p class="mb-4">Informasi tentang struktur kelembagaan desa.</p>
-      </div>
-   </div>
-   <div class="row justify-content-center">
-      <div class="col-md-8"> <!-- Sesuaikan ukuran kolom dengan kebutuhan -->
-         <div class="row">
-            <div class="col-md-4 text-center mb-4">
-               <a href="javascript:showModal('BPD')">
-                  <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
-                     <img src="<?= base_url('dist/') ?>assets/images/lembaga/bpd.png" alt="" class="avatar-sm material-shadow">
+      <div class="col-lg-9 offset-lg-2 col-md-10 offset-md-1">
+         <div class="card">
+            <div class="card-header">
+               <h2>Kelembagaan</h2>
+            </div>
+            <div class="card-body">
+               <div class="row justify-content-center">
+                  <div class="col-md-6"> <!-- Sesuaikan ukuran kolom dengan kebutuhan -->
+                     <div class="row">
+                        <div class="col-md-4 text-center mb-4">
+                           <a href="javascript:showModal('BPD')">
+                              <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
+                                 <img src="<?= base_url('dist/') ?>assets/images/lembaga/bpd.png" alt="" class="avatar-sm material-shadow">
+                              </div>
+                              <h5 class="fs-14 mb-1">BPD</h5>
+                           </a>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                           <a href="javascript:showModalGalery()">
+                              <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
+                                 <img src="<?= base_url('dist/') ?>assets/images/lembaga/lpm.png" alt="" class="avatar-sm material-shadow">
+                              </div>
+                              <h5 class="fs-14 mb-1">LPM</h5>
+                           </a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                           <div class="text-center">
+                              <a href="javascript:showModalISO()">
+                                 <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
+                                    <img src="<?= base_url('dist/') ?>assets/images/lembaga/bumdes.png" alt="" class="avatar-sm material-shadow">
+                                 </div>
+                                 <h5 class="fs-14 mb-1">BUMDES</h5>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                           <div class="text-center">
+                              <a href="javascript:showModalNews()">
+                                 <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
+                                    <img src="<?= base_url('dist/') ?>assets/images/lembaga/pkk.png" alt="" class="avatar-sm material-shadow">
+                                 </div>
+                                 <h5 class="fs-14 mb-1">PKK</h5>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                           <div class="text-center">
+                              <a href="javascript:showModalNews()">
+                                 <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
+                                    <img src="<?= base_url('dist/') ?>assets/images/lembaga/karang-taruna.png" alt="" class="avatar-sm material-shadow">
+                                 </div>
+                                 <h5 class="fs-14 mb-1">Karang Taruna</h5>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                           <div class="text-center">
+                              <a href="javascript:showModalNews()">
+                                 <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
+                                    <img src="<?= base_url('dist/') ?>assets/images/lembaga/posyandu.png" alt="" class="avatar-sm material-shadow">
+                                 </div>
+                                 <h5 class="fs-14 mb-1">Kader Posyandu</h5>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <h5 class="fs-14 mb-1">BPD</h5>
-               </a>
-            </div>
-            <div class="col-md-4 text-center mb-4">
-               <a href="javascript:showModalGalery()">
-                  <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
-                     <img src="<?= base_url('dist/') ?>assets/images/lembaga/lpm.png" alt="" class="avatar-sm material-shadow">
-                  </div>
-                  <h5 class="fs-14 mb-1">LPM</h5>
-               </a>
-            </div>
-            <div class="col-md-4 text-center">
-               <div class="text-center">
-                  <a href="javascript:showModalISO()">
-                     <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
-                        <img src="<?= base_url('dist/') ?>assets/images/lembaga/bumdes.png" alt="" class="avatar-sm material-shadow">
-                     </div>
-                     <h5 class="fs-14 mb-1">BUMDES</h5>
-                  </a>
-               </div>
-            </div>
-            <div class="col-md-4 text-center">
-               <div class="text-center">
-                  <a href="javascript:showModalNews()">
-                     <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
-                        <img src="<?= base_url('dist/') ?>assets/images/lembaga/pkk.png" alt="" class="avatar-sm material-shadow">
-                     </div>
-                     <h5 class="fs-14 mb-1">PKK</h5>
-                  </a>
-               </div>
-            </div>
-            <div class="col-md-4 text-center">
-               <div class="text-center">
-                  <a href="javascript:showModalNews()">
-                     <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
-                        <img src="<?= base_url('dist/') ?>assets/images/lembaga/karang-taruna.png" alt="" class="avatar-sm material-shadow">
-                     </div>
-                     <h5 class="fs-14 mb-1">Karang Taruna</h5>
-                  </a>
-               </div>
-            </div>
-            <div class="col-md-4 text-center">
-               <div class="text-center">
-                  <a href="javascript:showModalNews()">
-                     <div class="profile-user position-relative d-inline-block mx-auto mb-2 mt-3">
-                        <img src="<?= base_url('dist/') ?>assets/images/lembaga/posyandu.png" alt="" class="avatar-sm material-shadow">
-                     </div>
-                     <h5 class="fs-14 mb-1">Kader Posyandu</h5>
-                  </a>
                </div>
             </div>
          </div>
