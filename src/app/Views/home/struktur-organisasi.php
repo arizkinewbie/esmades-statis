@@ -1,13 +1,11 @@
-<div class="container-fluid py-5" style="margin-top: 100px; padding-left: 200px;">
+<div class="container-fluid py-5" style="padding-left: 15px; padding-right: 15px; margin-top: 45px;">
    <div class="row justify-content-center">
-      <div class="col-md-12 text-center">
-         <h2>Struktur Organisasi</h2>
-         <p class="mb-4">Diagram struktur organisasi Desa Kami.</p>
-      </div>
-   </div>
-   <div class="row justify-content-center">
-      <div class="col-lg-10">
+      <!-- Mengatur ulang lebar kolom dan offset untuk desktop dan tablet -->
+      <div class="col-lg-9 offset-lg-2 col-md-10 offset-md-1">
          <div class="card">
+            <div class="card-header d-flex align-items-center flex-wrap">
+               <h2>Struktur Organisasi</h2>
+            </div>
             <div class="card-body">
                <div id="chartDiv1" style="height: 600px;"></div>
             </div>
@@ -15,6 +13,7 @@
       </div>
    </div>
 </div>
+
 
 <script src="https://code.jscharting.com/latest/jscharting.js"></script>
 <script>

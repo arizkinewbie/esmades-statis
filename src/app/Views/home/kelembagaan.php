@@ -35,7 +35,7 @@
    </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class="container-fluid py-5" style="margin-top: 100px;">
+<div class="container-fluid py-5 mx-5" style="padding-left: 120px; margin-top: 50px;">
    <div class="row justify-content-center">
       <div class="col-md-12 text-center">
          <h2>Kelembagaan</h2>
