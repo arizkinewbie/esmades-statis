@@ -14,14 +14,8 @@ class Home extends BaseController
         $this->apiDomain = getenv('API_DOMAIN');
     }
 
-    public function index($path = null)
+    public function index($path = 'profil')
     {
-        if ($path === null) {
-            $content = 'profil';
-        } else {
-            $content = $path;
-        }
-
         //Get DATA from API
         $this->setJwtToken();
         $dataRequest = [
@@ -32,11 +26,13 @@ class Home extends BaseController
         if ($response->getStatusCode() == 200) {
             $ContentData = json_decode($response->getBody(), true);
         } else {
-            return $this->notFound('Halaman tidak ditemukan!');
+            $ContentData = [
+                'error' => $response->getBody(),
+            ];
         }
         $data = [
-            'title' => 'Beranda | ' . getenv('APP_NAME'),
-            'content' => $content,
+            'title' => ucwords(str_replace('-', ' ', $path)) . ' | ' . getenv('APP_NAME'),
+            'content' => $path,
         ];
         $data = array_merge($data, $ContentData[0]);
         return $this->render($data);
