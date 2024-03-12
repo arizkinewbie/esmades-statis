@@ -7,36 +7,42 @@
                     <h4 class="card-title mb-0 me-auto">Aset Desa</h4>
                     <div class="ms-auto mt-2 mt-lg-0">
                         <div class="btn-group dropend mb-0 mb-lg-0">
-                            <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button type="button" class="btn btn-outline-success dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="ri-global-line"></i> Layer Peta
                             </button>
                             <ul class="dropdown-menu p-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         OSM
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
                                     <label class="form-check-label" for="flexRadioDefault2">
                                         RBI
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
                                     <label class="form-check-label" for="flexRadioDefault3">
                                         ROAD
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault4" checked>
                                     <label class="form-check-label" for="flexRadioDefault4">
                                         Areial
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault5" checked>
                                     <label class="form-check-label" for="flexRadioDefault5">
                                         Areial Label
                                     </label>
@@ -44,12 +50,14 @@
                             </ul>
                         </div>
                         <div class="btn-group dropend ms-0 ms-lg-2">
-                            <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button type="button" class="btn btn-outline-success dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="ri-user-location-line"></i> Aset Desa
                             </button>
                             <ul class="dropdown-menu p-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                        checked>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Tanah
                                     </label>
@@ -89,72 +97,10 @@
                     </div>
                 </div><!-- end card header -->
 
-
-
-
                 <div class="card-body" style="height: 500px;">
-                    <div id="leaflet-map-custom-icons" class="leaflet-map"></div>
-                </div><!-- end card-body -->
+                    <div id="map"></div>
+                </div>
             </div><!-- end card -->
-
-            <div class="row d-none">
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title mb-0">Example</h4>
-                        </div><!-- end card header -->
-
-                        <div class="card-body">
-                            <div id="leaflet-map" class="leaflet-map"></div>
-                        </div><!-- end card-body -->
-                    </div><!-- end card -->
-                </div>
-                <!-- end col -->
-
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title mb-0">Markers, Circles and Polygons</h4>
-                        </div><!-- end card header -->
-
-                        <div class="card-body">
-                            <div id="leaflet-map-marker" class="leaflet-map"></div>
-                        </div><!-- end card-body -->
-                    </div><!-- end card -->
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-
-            <div class="row d-none">
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title mb-0">Working with Popups</h4>
-                        </div><!-- end card header -->
-
-                        <div class="card-body">
-                            <div id="leaflet-map-popup" class="leaflet-map"></div>
-                        </div><!-- end card-body -->
-                    </div><!-- end card -->
-                </div>
-                <!-- end col -->
-
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title mb-0">Markers with Custom Icons</h4>
-                        </div><!-- end card header -->
-
-                        <div class="card-body">
-                            <div id="leaflet-map-custom-icons" class="leaflet-map"></div>
-                        </div><!-- end card-body -->
-                    </div><!-- end card -->
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-
         </div>
         <!-- container-fluid -->
     </div>
