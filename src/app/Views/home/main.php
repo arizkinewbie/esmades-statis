@@ -246,7 +246,7 @@
 
             L.geoJSON(myGeoJSON).addTo(map)
         </script>
-
+        <?= view('home/layout/scripts') ?>
 </body>
 
 </html>
