@@ -50,7 +50,7 @@
         },
         series: [{
             points: [{
-                    label_text: '<span><img src="https://esmades.test/dist/assets/images/users/avatar-3.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%"><br>Kepala Desa<br>H. Irwanudin</span>',
+                    label_text: '<span><img src="<?= base_url() ?>/dist/assets/images/users/avatar-3.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%"><br>Kepala Desa<br>H. Irwanudin</span>',
                     id: 'PM',
                 },
                 {
