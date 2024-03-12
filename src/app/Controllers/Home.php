@@ -33,8 +33,8 @@ class Home extends BaseController
         $data = [
             'title' => ucwords(str_replace('-', ' ', $path)) . ' | ' . getenv('APP_NAME'),
             'content' => $path,
+            'data' => $ContentData,
         ];
-        $data = array_merge($data, $ContentData[0]);
         return $this->render($data);
     }
 }
