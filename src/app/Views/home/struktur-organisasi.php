@@ -1,17 +1,19 @@
-<div class="main-content">
-    <div class="page-content">
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-header align-items-center">
-                    <h2 class="">Struktur Organisasi</h2>
-                    <p class="mb-0">Diagram struktur organisasi Desa Kami.</p>
-                </div><!-- end card header -->
-                <div class="card-body">
-                    <div id="chartDiv1" style="height: 600px;"></div>
-                </div>
+<div class="container-fluid py-5" style="padding-left: 15px; padding-right: 15px; margin-top: 45px;">
+   <div class="row justify-content-center">
+      <!-- Mengatur ulang lebar kolom dan offset untuk desktop dan tablet -->
+      <div class="col-lg-9 offset-lg-2 col-md-10 offset-md-1">
+         <div class="card">
+            <div class="card-header d-flex align-items-center flex-wrap">
+               <h2>Struktur Organisasi</h2>
             </div>
-        </div>
-    </div>
+            <div class="card-body">
+               <div id="chartDiv1" style="height: 600px;"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
 
     <script src="https://code.jscharting.com/latest/jscharting.js"></script>
     <script>
@@ -48,7 +50,7 @@
         },
         series: [{
             points: [{
-                    label_text: '<span><img src="https://esmades.test/dist/assets/images/users/avatar-3.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%"><br>Kepala Desa<br>H. Irwanudin</span>',
+                    label_text: '<span><img src="<?= base_url() ?>/dist/assets/images/users/avatar-3.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%"><br>Kepala Desa<br>H. Irwanudin</span>',
                     id: 'PM',
                 },
                 {

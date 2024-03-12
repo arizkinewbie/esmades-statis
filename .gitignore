@@ -49,7 +49,7 @@ Vagrantfile
 #-------------------------
 # Temporary Files
 #-------------------------
-writable/
+# writable/
 src/writable/cache/*
 !src/writable/cache/index.html
 
