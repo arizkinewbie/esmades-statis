@@ -14,7 +14,7 @@
             </div>
             <div class="card-body">
                <div class="row justify-content-center mx-5"> <!-- Menggunakan mx-5 untuk margin -->
-                  <div class="row">
+                  <div id="lightgallery" class="row">
                      <div class="col-lg-12">
                         <div class="row gallery-wrapper">
                            <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development" data-category="designing development">
@@ -227,3 +227,32 @@
       </div>
    </div>
 </div>
+
+<script>
+   // Ambil semua tautan filter
+   const filterLinks = document.querySelectorAll('.categories');
+
+   // Ambil semua elemen galeri
+   const galleryItems = document.querySelectorAll('.element-item');
+
+   // Tambahkan event listener untuk setiap tautan filter
+   filterLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+         e.preventDefault();
+
+         // Dapatkan kategori yang ingin difilter
+         const category = this.getAttribute('data-filter');
+
+         // Sembunyikan semua elemen galeri
+         galleryItems.forEach(item => {
+            item.style.display = 'none';
+         });
+
+         // Tampilkan elemen galeri yang sesuai dengan kategori
+         document.querySelectorAll(category).forEach(item => {
+            item.style.display = 'block';
+         });
+      });
+   });
+
+</script>
