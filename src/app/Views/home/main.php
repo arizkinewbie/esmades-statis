@@ -32,7 +32,7 @@
     <!-- custom Css-->
     <link href="<?= base_url('dist/') ?>assets/css/custom.min.css" rel="stylesheet" type="text/css" />
     <!-- style Css-->
-    <link href="<?= base_url('/src/public/dist/') ?>assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url('dist/') ?>assets/css/style.css" rel="stylesheet" type="text/css" />
 
     <!-- Leaflet Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
