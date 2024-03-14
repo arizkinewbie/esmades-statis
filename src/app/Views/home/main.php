@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 
+    <!-- glightbox css -->
+    <link rel="stylesheet" href="<?= base_url('dist/') ?>assets/libs/glightbox/css/glightbox.min.css">
     <!-- Layout config Js -->
     <script src="<?= base_url('dist/') ?>assets/js/layout.js"></script>
     <!-- Bootstrap Css -->
@@ -29,6 +31,8 @@
     <link href="<?= base_url('dist/') ?>assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="<?= base_url('dist/') ?>assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <!-- style Css-->
+    <link href="<?= base_url('/src/public/dist/') ?>assets/css/style.css" rel="stylesheet" type="text/css" />
 
     <!-- Leaflet Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -43,18 +47,8 @@
         width: 100%;
         /* Sesuaikan lebar peta dengan konten card */
     }
-
-    .card-body.text-center {
-        flex: 0 0 50%;
-        transition: transform 0.3s;
-        /* Transisi agar perubahan skala terlihat mulus */
-    }
-
-    .card-body.text-center:hover {
-        transform: scale(1.1);
-        /* Perbesar elemen saat dihover */
-    }
     </style>
+
 </head>
 
 <body>
@@ -106,7 +100,7 @@
 
         <!-- END layout-wrapper -->
         <!--start back-to-top-->
-        <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <button onclick="topFunction()" class="btn btn-dark btn-icon" id="back-to-top">
             <i class="ri-arrow-up-line"></i>
         </button>
         <!--end back-to-top-->

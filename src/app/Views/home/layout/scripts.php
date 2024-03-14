@@ -6,7 +6,8 @@
 <script src="<?= base_url('dist/') ?>assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
 <script src="<?= base_url('dist/') ?>assets/js/plugins.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <!--datatable js-->
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -34,6 +35,14 @@
 <!-- App js -->
 <script src="<?= base_url('dist/') ?>assets/js/pages/home.js"></script>
 <script src="<?= base_url('dist/') ?>assets/js/app.js"></script>
+
+<!-- glightbox js -->
+<script src="<?= base_url('dist/') ?>assets/libs/glightbox/js/glightbox.min.js"></script>
+
+<!-- isotope-layout -->
+<script src="<?= base_url('dist/') ?>assets/libs/isotope-layout/isotope.pkgd.min.js"></script>
+
+<script src="<?= base_url('dist/') ?>assets/js/pages/gallery.init.js"></script>
 
 <!-- Leaflet Map -->
 <!-- <script>
