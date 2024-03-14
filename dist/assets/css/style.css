@@ -1,0 +1,10 @@
+.card-body.text-center {
+    flex: 0 0 50%;
+    transition: transform 0.3s;
+    /* Transisi agar perubahan skala terlihat mulus */
+}
+
+.card-body.text-center:hover {
+    transform: scale(1.1);
+    /* Perbesar elemen saat dihover */
+}
