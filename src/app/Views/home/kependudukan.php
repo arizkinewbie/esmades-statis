@@ -86,7 +86,7 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=g4CmBo
 // Icon untuk Kantor Desa
 var leafletIconKantorDesa = L.divIcon({
     html: '<i class="ri-community-line" style="font-size: 50px;"></i>',
-    iconSize: [50, 60],
+    iconSize: [0, 0],
     iconAnchor: [22, 40],
     popupAnchor: [-3, -36]
 });
@@ -94,7 +94,7 @@ var leafletIconKantorDesa = L.divIcon({
 // Icon untuk Tanah
 var leafletIconTanah = L.divIcon({
     html: '<i class="ri-blaze-line" style="font-size: 50px;"></i>', // Anda dapat mengubah kelas ikon sesuai kebutuhan
-    iconSize: [50, 60],
+    iconSize: [0, 0],
     iconAnchor: [22, 40],
     popupAnchor: [-3, -36]
 });
