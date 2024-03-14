@@ -51,32 +51,39 @@
                     <h5 class="card-title mb-0">Detail</h5>
                 </div>
                 <div class="card-body">
-                    <table id="scroll-horizontal" class="table nowrap align-middle" style="width:100%">
+                    <table id="sarana-prasarana-table" class="table nowrap align-middle" style="width:100%">
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th class="w-30">Nama Barang</th>
-                                <th>Kode Barang</th>
-                                <th>Register</th>
+                                <th class="w-30">Nama Sarana/Prasarana</th>
+                                <th>Jenis</th>
+                                <th>Info</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr id="sarana-prasarana-row-1">
                                 <td>1</td>
-                                <td>Laptop ASUS</td>
-                                <td>3070102</td>
-                                <td>3070102 | 00001</td>
+                                <td>Puskesmas</td>
+                                <td>Kesehatan</td>
+                                <td>fasilitas lengkap dan siaga 24 jam</td>
                             </tr>
-                            <tr>
+                            <tr id="sarana-prasarana-row-2">
                                 <td>2</td>
-                                <td>Kantor Desa</td>
-                                <td>3070102</td>
-                                <td>3070102 | 00001</td>
+                                <td>Sekolah Dasar Negeri</td>
+                                <td>Pendidikan</td>
+                                <td>SDN Telaga Ceria 1 akreditasi A</td>
+                            </tr>
+                            <tr id="sarana-prasarana-row-3">
+                                <td>3</td>
+                                <td>Pasar Desa Telaga</td>
+                                <td>Perdagangan</td>
+                                <td>Pasar tradisional yang buka setiap hari dari pukul 06.00 sampai 17.00</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+
         </div>
         <!-- container-fluid -->
     </div>
@@ -257,4 +264,43 @@
 
     // Menampilkan Sarana dan Prasarana pada peta
     tampilkanSaranaPrasarana();
+
+
+
+    // Fungsi untuk memperbarui atau memperbaharui tabel dengan data baru
+    function updateTable() {
+        var tableData = [{
+                nama: "Puskesmas Telaga Sehat",
+                jenis: "Kesehatan",
+                info: "Puskesmas dengan fasilitas lengkap dan siaga 24 jam"
+            },
+            {
+                nama: "SDN Telaga Ceria 1",
+                jenis: "Pendidikan",
+                info: "Sekolah Dasar Negeri dengan akreditasi A"
+            },
+            // Tambahkan data sarana/prasarana lainnya sesuai dengan data di peta
+        ];
+
+        var table = $('#sarana-prasarana-table').DataTable();
+        table.clear().draw(); // Menghapus semua data dari tabel
+
+        // Menambahkan data baru ke dalam tabel
+        tableData.forEach(function(item, index) {
+            var rowData = [
+                index + 1,
+                item.nama,
+                item.jenis,
+                item.info
+            ];
+            table.row.add(rowData).node().id = 'sarana-prasarana-row-' + (index + 1); // Menambahkan id unik ke setiap baris tabel
+        });
+
+        table.draw(); // Menggambar ulang tabel dengan data baru
+    }
+
+    // Memanggil fungsi untuk memperbarui atau memperbaharui tabel saat memuat halaman
+    $(document).ready(function() {
+        updateTable();
+    });
 </script>
