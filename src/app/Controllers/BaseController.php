@@ -97,16 +97,16 @@ abstract class BaseController extends Controller
     protected function setJwtToken()
     {
         $session = session();
-        $url = getenv('API_DOMAIN') . "/api/auth/login";
-        $data = [
-            'email' => getenv('KLIEN_EMAIL'),
-            'password' => getenv('KLIEN_PASS'),
-        ];
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($ch);
-        $session->set('jwtToken', json_decode($response)->token);
-        curl_close($ch);
+        // $url = getenv('API_DOMAIN') . "/api/auth/login";
+        // $data = [
+        //     'email' => getenv('KLIEN_EMAIL'),
+        //     'password' => getenv('KLIEN_PASS'),
+        // ];
+        // $ch = curl_init($url);
+        // curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $response = curl_exec($ch);
+        $session->set('jwtToken', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFc21hZGVzIEpXVCIsImF1ZCI6IkVzbWFkZXMgSldUIiwic3ViIjoiRXNtYWRlcyBKV1QiLCJrbGllbl9pZCI6IjEiLCJrbGllbl9lbWFpbCI6ImtsaWVuMDFAZ21haWwuY29tIiwia2xpZW5fZGVzYV9rb2RlIjoiMzIuMTAuMDQuMjAxMCIsImtsaWVuX2Rlc2FfaWQiOiIyOTE5OCJ9.5NZcRobC1chAX119vuYhqm-6g7jw0kboj-DoGjxzxVI');
+        // curl_close($ch);
     }
 }
