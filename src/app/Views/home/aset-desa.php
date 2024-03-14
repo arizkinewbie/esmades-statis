@@ -97,7 +97,7 @@
                     </div>
                 </div><!-- end card header -->
 
-                <div class="card-body" style="height: 500px;">
+                <div class="card-body" style="height: 520px;">
                     <div id="map"></div>
                 </div>
             </div><!-- end card -->
