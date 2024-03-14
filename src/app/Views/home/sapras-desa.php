@@ -5,51 +5,39 @@
             <div class="card">
                 <div class="card-header d-flex align-items-center flex-wrap">
                     <h4 class="card-title mb-0 me-auto">Sarana dan Prasarana Desa</h4>
-                    <div class="ms-auto mt-2 mt-lg-0">
+                    <!-- <div class="ms-auto mt-2 mt-lg-0">
                         <div class="btn-group dropend ms-0 ms-lg-2">
                             <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="ri-user-location-line"></i> Jenis Sapras Desa
                             </button>
                             <ul class="dropdown-menu p-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Tanah
+                                    <input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckAlam" checked>
+                                    <label class="form-check-label" for="flexCheckAlam">
+                                        Alam
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Kantor Desa
+                                    <input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckBudaya" checked>
+                                    <label class="form-check-label" for="flexCheckBudaya">
+                                        Budaya
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Kantor KUD
+                                    <input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckSejarah" checked>
+                                    <label class="form-check-label" for="flexCheckSejarah">
+                                        Sejarah
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Kantor Kebudayaan
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Kantor Seni
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Gedung Olahraga
+                                    <input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckSaranaPrasarana">
+                                    <label class="form-check-label" for="flexCheckSaranaPrasarana">
+                                        Sarana dan Prasarana
                                     </label>
                                 </div>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="card-body" style="height: 500px;">
@@ -95,130 +83,178 @@
 </div>
 
 <script>
-    const lat = -0.7893;
-    const lng = 113.9213;
+    const lat = -6.983464559152256; // Latitude desa Telagawetan
+    const lng = 108.31551443184851; // Longitude desa Telagawetan
 
-    var map = L.map('map').setView([lat, lng], 5); // Koordinat Indonesia: [-0.7893, 113.9213]
+    var map = L.map('map').setView([lat, lng], 14); // Set zoom level ke 14 agar lebih dekat dengan desa Telagawetan
 
     // Mengambil API disini
     L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=g4CmBorxbBmnxsUejbeq', {
-        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.maptiler.com/">Maptiler</a>',
         maxZoom: 19,
     }).addTo(map);
 
-    // Icon Marker
-    var leafletIcon = L.icon({
-        iconUrl: '<?= base_url('dist/') ?>assets/images/logo-sm.png',
-        iconSize: [38, 40],
-        iconAnchor: [22, 40],
-        popupAnchor: [-3, -36]
-    })
+    // Data Sarana dan Prasarana Desa
+    var saranaPrasarana = [{
+            nama: "Puskesmas Telaga Sehat",
+            jenis: "Kesehatan",
+            lat: -6.982772,
+            lng: 108.312204,
+            info: "Puskesmas dengan fasilitas lengkap dan siaga 24 jam"
+        },
+        {
+            nama: "SDN Telaga Ceria 1",
+            jenis: "Pendidikan",
+            lat: -6.981672,
+            lng: 108.314304,
+            info: "Sekolah Dasar Negeri dengan akreditasi A"
+        },
+        {
+            nama: "Pasar Desa Telaga",
+            jenis: "Perdagangan",
+            lat: -6.980572,
+            lng: 108.315404,
+            info: "Pasar tradisional yang buka setiap hari dari pukul 06.00 sampai 17.00"
+        }
+        // Tambahkan lebih banyak data sarana dan prasarana jika diperlukan
+    ];
 
-    // Edit marker daerah disini
-    var markerJakarta = L.marker([-6.2088, 106.8456], {
-        icon: leafletIcon
-    }).addTo(map); // Menambahkan marker di Jakarta
-
-    var markerBandung = L.marker([-6.9175, 107.6191], {
-        icon: leafletIcon
-    }).addTo(map); // Menambahkan marker di Bandung
-
-
-
-    // PopUp Jakarta Area
-    markerJakarta.bindPopup("<b> Jakarta </b><br> Ibu kota Indonesia").openPopup();
-
-    // Garis Wilayah Jakarta
-    var myGeoJSON = {
+    // Koordinat geometris untuk poligon wilayah Desa Talaga Wetan
+    var talagaWetanPolygon = {
         "type": "FeatureCollection",
         "features": [{
             "type": "Feature",
             "geometry": {
-                "type": "Polygon",
+                "type": "LineString",
                 "coordinates": [
-                    [
-                        [106.97054245, -6.09329647],
-                        [106.9695805, -6.15451342],
-                        [106.97150448, -6.18607567],
-                        [106.9541884, -6.22146142],
-                        [106.94360637, -6.24058783],
-                        [106.94072036, -6.25780102],
-                        [106.90993615, -6.25684476],
-                        [106.90512615, -6.27501364],
-                        [106.90993615, -6.29509432],
-                        [106.92148021, -6.30848106],
-                        [106.91474623, -6.36584864],
-                        [106.89646811, -6.37254106],
-                        [106.87241796, -6.36298042],
-                        [106.85413993, -6.34959509],
-                        [106.84067181, -6.33716565],
-                        [106.81758369, -6.35628779],
-                        [106.7973816, -6.3610682],
-                        [106.7973816, -6.33907787],
-                        [106.80507769, -6.31517421],
-                        [106.77814153, -6.3170866],
-                        [106.77044552, -6.3610682],
-                        [106.71945921, -6.35724391],
-                        [106.68578908, -6.35819994],
-                        [106.65500495, -6.36298042],
-                        [106.64923293, -6.34290238],
-                        [106.65981495, -6.31613041],
-                        [106.65308089, -6.28935706],
-                        [106.64923293, -6.26736368],
-                        [106.64297988, -6.2420223],
-                        [106.63672684, -6.2300684],
-                        [106.61315773, -6.22528675],
-                        [106.59968967, -6.20759432],
-                        [106.5891076, -6.21954873],
-                        [106.5674625, -6.21094158],
-                        [106.55543744, -6.19946515],
-                        [106.55255143, -6.18225005],
-                        [106.58189257, -6.17077301],
-                        [106.58814561, -6.15977395],
-                        [106.61123372, -6.14255756],
-                        [106.61556275, -6.12055802],
-                        [106.63816984, -6.1066883],
-                        [106.64490391, -6.1157754],
-                        [106.67087803, -6.10334036],
-                        [106.7103202, -6.09473133],
-                        [106.72523129, -6.09042676],
-                        [106.74110436, -6.10142726],
-                        [106.78391356, -6.10764483],
-                        [106.79690062, -6.09520963],
-                        [106.8103687, -6.11816673],
-                        [106.82872495, -6.1153166],
-                        [106.83922885, -6.12103629],
-                        [106.85654493, -6.10860138],
-                        [106.87722805, -6.10334036],
-                        [106.87674703, -6.09473133],
-                        [106.91667021, -6.09903586],
-                        [106.97054245, -6.09329647]
-                    ]
+                    [108.3112577, -6.98967258],
+                    [108.31057576, -6.99019904],
+                    [108.30962861, -6.99063149],
+                    [108.3097991, -6.98959738],
+                    [108.3104621, -6.98976659],
+                    [108.31087884, -6.98907092],
+                    [108.31144713, -6.9889205],
+                    [108.31135241, -6.98811201],
+                    [108.31053787, -6.98673945],
+                    [108.31093567, -6.98623179],
+                    [108.31139906, -6.97635744]
                 ]
             },
-            "id": "2281dc87-cda2-45ab-811f-795e996f3d3a",
+            "id": "a78ac226-d08a-4d05-a5e6-35e4271041bc",
             "properties": {
-                "name": "Jakarta"
+                "name": ""
             }
         }, {
             "type": "Feature",
             "geometry": {
-                "type": "Polygon",
+                "type": "LineString",
                 "coordinates": [
-                    [
-                        [106.61941075, -6.13155788],
-                        [106.61941075, -6.13155788],
-                        [106.61941075, -6.13155788],
-                        [106.61941075, -6.13155788]
-                    ]
+                    [108.31139906, -6.97635744],
+                    [108.31139906, -6.97635744]
                 ]
             },
-            "id": "0856cd8f-228e-4d43-9471-532821197879",
+            "id": "bc199441-ab30-4be4-a177-6bf16320af1d",
+            "properties": {
+                "name": "Talagawetan"
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [108.31139906, -6.97635744],
+                    [108.31318822, -6.97662607],
+                    [108.31517284, -6.9765813],
+                    [108.31627039, -6.97716332],
+                    [108.31673052, -6.97789708],
+                    [108.31671859, -6.97942507],
+                    [108.31661119, -6.98062139],
+                    [108.31690952, -6.98095305],
+                    [108.31718682, -6.98139959],
+                    [108.31718682, -6.98521646],
+                    [108.31694056, -6.98651382],
+                    [108.32112694, -6.9889393],
+                    [108.32432829, -6.99134597],
+                    [108.31881591, -6.99294414],
+                    [108.31735731, -6.99221086],
+                    [108.31551985, -6.99318856],
+                    [108.3124511, -6.99307575],
+                    [108.31260264, -6.99175961],
+                    [108.31212907, -6.99102633],
+                    [108.3124511, -6.99046227],
+                    [108.31290573, -6.99036826],
+                    [108.31275419, -6.98989821],
+                    [108.31199647, -6.99008623],
+                    [108.3112577, -6.98967258]
+                ]
+            },
+            "id": "670fff86-1e8e-4a3a-a3a2-f2e128c872d3",
             "properties": {
                 "name": ""
             }
         }]
+    };
+
+    // Menambahkan poligon ke peta
+    L.geoJSON(talagaWetanPolygon, {
+        style: function(feature) {
+            return {
+                color: "#3388ff",
+                weight: 3
+            };
+        }
+    }).addTo(map);
+
+
+    // Fungsi untuk menampilkan marker Sarana dan Prasarana
+    function tampilkanSaranaPrasarana() {
+        saranaPrasarana.forEach(function(item) {
+            var icon;
+            switch (item.jenis) {
+                case 'Kesehatan':
+                    icon = L.divIcon({
+                        html: '<i class="ri-hospital-line custom-icon" style="font-size: 24px; color: #FF5733;"></i>',
+                        className: 'custom-icon',
+                        iconSize: [24, 24],
+                        iconAnchor: [12, 24],
+                        popupAnchor: [0, -24]
+                    });
+                    break;
+                case 'Pendidikan':
+                    icon = L.divIcon({
+                        html: '<i class="ri-school-line custom-icon" style="font-size: 24px; color: #33FF8B;"></i>',
+                        className: 'custom-icon',
+                        iconSize: [24, 24],
+                        iconAnchor: [12, 24],
+                        popupAnchor: [0, -24]
+                    });
+                    break;
+                case 'Perdagangan':
+                    icon = L.divIcon({
+                        html: '<i class="ri-shopping-bag-line custom-icon" style="font-size: 24px; color: #336BFF;"></i>',
+                        className: 'custom-icon',
+                        iconSize: [24, 24],
+                        iconAnchor: [12, 24],
+                        popupAnchor: [0, -24]
+                    });
+                    break;
+                    // Tambahkan jenis lainnya jika diperlukan
+                default:
+                    icon = L.divIcon({
+                        html: '<i class="ri-map-pin-line custom-icon" style="font-size: 24px; color: #000;"></i>',
+                        className: 'custom-icon',
+                        iconSize: [24, 24],
+                        iconAnchor: [12, 24],
+                        popupAnchor: [0, -24]
+                    });
+            }
+            var marker = L.marker([item.lat, item.lng], {
+                icon: icon
+            }).addTo(map);
+            marker.bindPopup(`<b>${item.nama}</b><br>${item.jenis}<br>${item.info}`);
+        });
     }
 
-    L.geoJSON(myGeoJSON).addTo(map)
+    // Menampilkan Sarana dan Prasarana pada peta
+    tampilkanSaranaPrasarana();
 </script>

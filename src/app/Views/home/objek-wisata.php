@@ -11,31 +11,26 @@
                             </button>
                             <ul class="dropdown-menu p-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioSemua" checked>
-                                    <label class="form-check-label" for="flexRadioSemua">
-                                        Semua
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Alam">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckAlam" checked>
+                                    <label class="form-check-label" for="flexCheckAlam">
                                         Alam
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Budaya">
-                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    <input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckBudaya" checked>
+                                    <label class="form-check-label" for="flexCheckBudaya">
                                         Budaya
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="Sejarah">
-                                    <label class="form-check-label" for="flexRadioDefault3">
+                                    <input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckSejarah" checked>
+                                    <label class="form-check-label" for="flexCheckSejarah">
                                         Sejarah
                                     </label>
                                 </div>
-                                <!-- Tambahkan jenis wisata lainnya jika diperlukan -->
+                                <!-- Tambahkan lebih banyak checkboxes sesuai kebutuhan -->
                             </ul>
+
 
                         </div>
                     </div>
@@ -84,9 +79,10 @@
 </div>
 
 <script>
-    const lat = -6.7860; // Latitude untuk Desa Talaga Wetan
-    const lng = 107.6422; // Longitude untuk Desa Talaga Wetan
-    var map = L.map('map').setView([lat, lng], 13); // Set view ke Desa Talaga Wetan dengan zoom yang lebih dekat
+    const lat = -6.983464559152256; // Latitude desa Telagawetan
+    const lng = 108.31551443184851; // Longitude desa Telagawetan
+
+    var map = L.map('map').setView([lat, lng], 14); // Set zoom level ke 14 agar lebih dekat dengan desa Telagawetan
 
     // Mengambil API disini
     L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=g4CmBorxbBmnxsUejbeq', {
@@ -94,47 +90,58 @@
         maxZoom: 19,
     }).addTo(map);
 
-    // Icon Marker menggunakan Font Awesome
     var leafletIcon = {
         'Alam': L.divIcon({
-            iconUrl: '<?= base_url('dist/') ?>assets/images/logo-sm.png',
-            iconSize: [38, 40],
-            iconAnchor: [22, 40],
-            popupAnchor: [-3, -36]
+            html: '<i class="ri-leaf-line custom-icon" style="font-size: 24px; color: green;"></i>', // Menggunakan ikon daun untuk "Alam"
+            className: 'custom-icon',
+            iconSize: [24, 24],
+            iconAnchor: [12, 24],
+            popupAnchor: [0, -24]
         }),
         'Budaya': L.divIcon({
-            iconUrl: '<?= base_url('dist/') ?>assets/images/logo-sm.png',
-            iconSize: [38, 40],
-            iconAnchor: [22, 40],
-            popupAnchor: [-3, -36]
+            html: '<i class="ri-community-line custom-icon" style="font-size: 24px; color: red;"></i>',
+            className: 'custom-icon',
+            iconSize: [24, 24],
+            iconAnchor: [12, 24],
+            popupAnchor: [0, -24]
         }),
         'Sejarah': L.divIcon({
-            iconUrl: '<?= base_url('dist/') ?>assets/images/logo-sm.png',
-            iconSize: [38, 40],
-            iconAnchor: [22, 40],
-            popupAnchor: [-3, -36]
+            html: '<i class="ri-book-line custom-icon" style="font-size: 24px; color: blue;"></i>', // Menggunakan ikon buku untuk "Sejarah"
+            className: 'custom-icon',
+            iconSize: [24, 24],
+            iconAnchor: [12, 24],
+            popupAnchor: [0, -24]
         }),
-        // Tambahkan ikon lain sesuai jenis wisata yang ada
+        // Tambahkan ikon kustom lainnya jika diperlukan
     };
+
+
+    // Kemudian tambahkan CSS untuk custom-icon
+
+
 
     // Data Tempat Wisata di Desa Talaga Wetan
     var tempatWisata = [{
-            lat: -6.7800,
-            lng: 107.6380,
+            lat: -6.987297244550035,
+            lng: 108.31677748931818,
             jenis: 'Alam',
-            info: 'Air Terjun Talaga Wetan'
+            info: 'Air Terjun Talaga Wetan',
+            icon: leafletIcon.Alam
         },
         {
-            lat: -6.7850,
-            lng: 107.6425,
+            lat: -6.978772163242786,
+            lng: 108.31320484104683,
             jenis: 'Budaya',
-            info: 'Candi Cangkuang'
+            info: 'Candi Cangkuang',
+            icon: leafletIcon.Budaya
         },
         {
-            lat: -6.7880,
-            lng: 107.6445,
+            lat: -6.986186843601615,
+            lng: 108.31165308472696,
             jenis: 'Sejarah',
-            info: 'Benteng Van Der Wijck'
+            info: 'Benteng Van Der Wijck',
+            icon: leafletIcon.Sejarah
+
         }
         // Tambahkan data lain jika ada
     ];
@@ -167,81 +174,78 @@
 
     // Koordinat geometris untuk poligon wilayah Desa Talaga Wetan
     var talagaWetanPolygon = {
-        "type": "Feature",
-        "properties": {
-            "name": "Desa Talaga Wetan"
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [107.647294, -6.786601],
-                    [107.647857, -6.784999],
-                    [107.648837, -6.783676],
-                    [107.650570, -6.782958],
-                    [107.652675, -6.783371],
-                    [107.653454, -6.783747],
-                    [107.654069, -6.784856],
-                    [107.654998, -6.785124],
-                    [107.657246, -6.786028],
-                    [107.658704, -6.786121],
-                    [107.659833, -6.785648],
-                    [107.661697, -6.784369],
-                    [107.663605, -6.783300],
-                    [107.663935, -6.782253],
-                    [107.664713, -6.781481],
-                    [107.666214, -6.780881],
-                    [107.666836, -6.780755],
-                    [107.668774, -6.780835],
-                    [107.669361, -6.780331],
-                    [107.670133, -6.779424],
-                    [107.671761, -6.779791],
-                    [107.671875, -6.780634],
-                    [107.672693, -6.781490],
-                    [107.673569, -6.781634],
-                    [107.674623, -6.782424],
-                    [107.675254, -6.782538],
-                    [107.675686, -6.783375],
-                    [107.676641, -6.783988],
-                    [107.676521, -6.784587],
-                    [107.676370, -6.785342],
-                    [107.675801, -6.785827],
-                    [107.676643, -6.786408],
-                    [107.676501, -6.786988],
-                    [107.675962, -6.787396],
-                    [107.674801, -6.787693],
-                    [107.674401, -6.788466],
-                    [107.673553, -6.788942],
-                    [107.672924, -6.788563],
-                    [107.672504, -6.788111],
-                    [107.672032, -6.787591],
-                    [107.671147, -6.787319],
-                    [107.670233, -6.786730],
-                    [107.669166, -6.787078],
-                    [107.667964, -6.786689],
-                    [107.666766, -6.786634],
-                    [107.665404, -6.787041],
-                    [107.663865, -6.787763],
-                    [107.663131, -6.788601],
-                    [107.662655, -6.789276],
-                    [107.661550, -6.789552],
-                    [107.659904, -6.789634],
-                    [107.658417, -6.789449],
-                    [107.656767, -6.789541],
-                    [107.656219, -6.789019],
-                    [107.655437, -6.788404],
-                    [107.654365, -6.787490],
-                    [107.652636, -6.786859],
-                    [107.651601, -6.786866],
-                    [107.650809, -6.786658],
-                    [107.649780, -6.786779],
-                    [107.649121, -6.787148],
-                    [107.648702, -6.787620],
-                    [107.648192, -6.787388],
-                    [107.647294, -6.786601]
+        "type": "FeatureCollection",
+        "features": [{
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [108.3112577, -6.98967258],
+                    [108.31057576, -6.99019904],
+                    [108.30962861, -6.99063149],
+                    [108.3097991, -6.98959738],
+                    [108.3104621, -6.98976659],
+                    [108.31087884, -6.98907092],
+                    [108.31144713, -6.9889205],
+                    [108.31135241, -6.98811201],
+                    [108.31053787, -6.98673945],
+                    [108.31093567, -6.98623179],
+                    [108.31139906, -6.97635744]
                 ]
-            ]
-        }
+            },
+            "id": "a78ac226-d08a-4d05-a5e6-35e4271041bc",
+            "properties": {
+                "name": ""
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [108.31139906, -6.97635744],
+                    [108.31139906, -6.97635744]
+                ]
+            },
+            "id": "bc199441-ab30-4be4-a177-6bf16320af1d",
+            "properties": {
+                "name": "Talagawetan"
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [108.31139906, -6.97635744],
+                    [108.31318822, -6.97662607],
+                    [108.31517284, -6.9765813],
+                    [108.31627039, -6.97716332],
+                    [108.31673052, -6.97789708],
+                    [108.31671859, -6.97942507],
+                    [108.31661119, -6.98062139],
+                    [108.31690952, -6.98095305],
+                    [108.31718682, -6.98139959],
+                    [108.31718682, -6.98521646],
+                    [108.31694056, -6.98651382],
+                    [108.32112694, -6.9889393],
+                    [108.32432829, -6.99134597],
+                    [108.31881591, -6.99294414],
+                    [108.31735731, -6.99221086],
+                    [108.31551985, -6.99318856],
+                    [108.3124511, -6.99307575],
+                    [108.31260264, -6.99175961],
+                    [108.31212907, -6.99102633],
+                    [108.3124511, -6.99046227],
+                    [108.31290573, -6.99036826],
+                    [108.31275419, -6.98989821],
+                    [108.31199647, -6.99008623],
+                    [108.3112577, -6.98967258]
+                ]
+            },
+            "id": "670fff86-1e8e-4a3a-a3a2-f2e128c872d3",
+            "properties": {
+                "name": ""
+            }
+        }]
     };
 
     // Menambahkan poligon ke peta
@@ -249,56 +253,49 @@
         style: function(feature) {
             return {
                 color: "#3388ff",
-                weight: 1
+                weight: 3
             };
         }
     }).addTo(map);
 
 
-    // Listener untuk radio button
-    document.querySelectorAll('input[name="flexRadioDefault"]').forEach(function(radio) {
-        radio.addEventListener('change', function() {
-            tampilkanMarker(this.nextElementSibling.textContent.trim()); // Pastikan teks di trim untuk menghilangkan spasi berlebih
-        });
-    });
 
     // Inisialisasi filter
     // tampilkanMarker('Alam'); // Menampilkan marker jenis Alam secara default
 
-    // Fungsi untuk menampilkan marker
-    function tampilkanMarker(jenis) {
+    // Fungsi untuk menampilkan marker berdasarkan filter
+    function tampilkanMarker() {
         // Hapus semua marker sebelumnya
         map.eachLayer(function(layer) {
-            if (layer instanceof L.Marker) { // Hanya hapus jika layer adalah instance dari L.Marker
+            if (layer instanceof L.Marker) {
                 map.removeLayer(layer);
             }
         });
 
-        // Menampilkan kembali base layer
-        L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=g4CmBorxbBmnxsUejbeq', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.maptiler.com/">Maptiler</a>',
-            maxZoom: 19,
-        }).addTo(map);
+        // Kumpulkan semua jenis wisata yang dipilih dari checkboxes
+        var jenisDipilih = [];
+        document.querySelectorAll('input[name="flexCheckDefault"]:checked').forEach(function(checkbox) {
+            jenisDipilih.push(checkbox.nextElementSibling.textContent.trim());
+        });
 
-        var wisataFiltered = jenis === 'Semua' ? tempatWisata : tempatWisata.filter(item => item.jenis === jenis);
-
-        // Menampilkan marker
-        wisataFiltered.forEach(function(item) {
-            var marker = L.marker([item.lat, item.lng], {
-                icon: leafletIcon[item.jenis]
-            }).addTo(map); // Pastikan icon ditambahkan
-            marker.bindPopup(item.info);
+        // Filter dan tampilkan marker berdasarkan jenis yang dipilih
+        tempatWisata.forEach(function(item) {
+            if (jenisDipilih.includes(item.jenis)) {
+                var marker = L.marker([item.lat, item.lng], {
+                    icon: item.icon
+                }).addTo(map);
+                marker.bindPopup(item.info);
+            }
         });
     }
 
-    // Listener untuk radio button
-    document.querySelectorAll('input[name="flexRadioDefault"]').forEach(function(radio) {
-        radio.addEventListener('change', function() {
-            var jenis = this.nextElementSibling.textContent.trim();
-            tampilkanMarker(jenis); // Update untuk menyesuaikan dengan pemilihan semua jenis wisata
+    // Event listener untuk checkboxes
+    document.querySelectorAll('input[name="flexCheckDefault"]').forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            tampilkanMarker(); // Memanggil fungsi tampilkanMarker setiap kali checkbox diubah
         });
     });
 
-    // Inisialisasi dengan menampilkan semua jenis wisata
-    tampilkanMarker('Semua'); // Menampilkan semua jenis wisata sebagai default
+    // Inisialisasi dengan menampilkan marker berdasarkan filter default (semua dipilih)
+    tampilkanMarker();
 </script>
