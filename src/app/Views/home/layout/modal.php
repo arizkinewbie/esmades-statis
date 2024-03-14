@@ -7,24 +7,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h6 class="fs-15">Sejarah</h6>
+                <h6 class="fs-15">Informasi</h6>
                 <div class="d-flex">
                     <div class="flex-grow-1 ms-2">
                         <p class="text-muted mb-0">
-                            <?= $sejarah ?>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad aspernatur eius maxime vero, minima tempore maiores? Sequi, ducimus quisquam beatae veritatis necessitatibus tenetur magnam ipsum velit modi delectus, rem explicabo.
                         </p>
                     </div>
                 </div>
-                <h6 class="fs-16 my-3">Visi</h6>
+                <h6 class="fs-16 my-3">Struktur Organisasi</h6>
                 <div class="d-flex mt-3">
                     <div class="flex-grow-1 ms-2 ">
-                        <p class="text-muted mb-0"><?= $visi ?></p>
-                    </div>
-                </div>
-                <h6 class="fs-16 my-3">Misi</h6>
-                <div class="d-flex mt-3">
-                    <div class="flex-grow-1 ms-2 ">
-                        <p class="text-muted mb-0"><?= $misi ?></p>
+                        <img src="https://asset.kompas.com/crops/7fAEg0knuiNvwiSEWFgv9UxOKCc=/0x48:1024x730/750x500/data/photo/2022/06/04/629b54ac4d4ba.png" width="500" />
                     </div>
                 </div>
             </div>
