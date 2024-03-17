@@ -14,6 +14,7 @@
                                     <div class="text-center card-header">
                                         <ul class="list-inline categories-filter animation-nav" id="filter">
                                             <li class="list-inline-item"><a class="categories active" data-filter="*">All</a></li>
+                                            <li class="list-inline-item"><a class="categories" data-filter=".pembangunan">Pembangunan</a></li>
                                             <li class="list-inline-item"><a class="categories" data-filter=".project">Project</a></li>
                                             <li class="list-inline-item"><a class="categories" data-filter=".designing">Designing</a></li>
                                             <li class="list-inline-item"><a class="categories" data-filter=".photography">Photography</a></li>
@@ -25,10 +26,10 @@
                                         <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development" data-category="designing development">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-1.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-1.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/hotmik-fajawan-2-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/hotmik-fajawan-2-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Glasses and laptop from above
+                                                            <h5 class="overlay-caption">Hotmik Pajawan
                                                             </h5>
                                                         </div>
                                                     </a>
@@ -54,13 +55,13 @@
                                             </div>
                                         </div>
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography" data-category="photography">
+                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-2.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-2.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/11/BLT.1-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/11/BLT.1-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Working at a coffee shop</h5>
+                                                            <h5 class="overlay-caption">Pembagian BLT DESA</h5>
                                                         </div>
                                                     </a>
 
@@ -89,10 +90,10 @@
                                         <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project development" data-category="development">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-3.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-3.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-posyandu2-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-posyandu2-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Photo was taken in Beach</h5>
+                                                            <h5 class="overlay-caption">Pembangunan Posyandu</h5>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -117,13 +118,13 @@
                                             </div>
                                         </div>
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing" data-category="project designing">
+                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing pembangunan" data-category="project designing pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-4.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-4.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/hotmik-cikirai-1-1-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/hotmik-cikirai-1-1-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Drawing a sketch</h5>
+                                                            <h5 class="overlay-caption">Hotmik Cikirai pembangunan</h5>
                                                         </div>
                                                     </a>
 
@@ -149,13 +150,13 @@
                                             </div>
                                         </div>
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing" data-category="project designing">
+                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing pembangunan" data-category="project designing pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-5.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-5.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-saluran-pasar-2-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-saluran-pasar-2-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Working from home little spot
+                                                            <h5 class="overlay-caption">Saluran Pasar Sayur
                                                             </h5>
                                                         </div>
                                                     </a>
@@ -180,13 +181,13 @@
                                             </div>
                                         </div>
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography" data-category="photography">
+                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-6.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-6.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/saluran-karanganyar-2-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/saluran-karanganyar-2-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Project discussion with team
+                                                            <h5 class="overlay-caption">Saluran Karanganyar
                                                             </h5>
                                                         </div>
                                                     </a>
@@ -215,10 +216,10 @@
                                         <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development" data-category="designing development">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-7.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-7.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-saluran-astana-1-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-saluran-astana-1-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Sunrise above a beach</h5>
+                                                            <h5 class="overlay-caption">Saluran Astana</h5>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -243,13 +244,13 @@
                                             </div>
                                         </div>
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography" data-category="photography">
+                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-8.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-8.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-jalankadawung-1-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-jalankadawung-1-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Glasses and laptop from above
+                                                            <h5 class="overlay-caption">Jalan Kadawung
                                                             </h5>
                                                         </div>
                                                     </a>
@@ -276,15 +277,14 @@
                                         </div>
                                         <!-- end col -->
 
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development" data-category="designing development">
+                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development pembangunan" data-category="designing development pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-9.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-9.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Dramatic clouds at the Golden
-                                                                Gate
-                                                                Bridge</h5>
+                                                            <h5 class="overlay-caption">Jalan Baru
+                                                            </h5>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -310,11 +310,11 @@
                                         </div>
                                         <!-- end col -->
 
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing" data-category="project designing">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing" data-category="project designing">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-10.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-10.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">Fun day at the Hill Station</h5>
                                                         </div>
@@ -338,14 +338,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
 
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography" data-category="photography">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography" data-category="photography">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-11.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-11.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">Cycling in the countryside</h5>
                                                         </div>
@@ -371,14 +371,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
 
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography" data-category="photography">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography" data-category="photography">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
-                                                    <a class="image-popup" href="<?= base_url('dist/') ?>assets/images/small/img-12.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="<?= base_url('dist/') ?>assets/images/small/img-12.jpg" alt="" />
+                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" title="">
+                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" alt="" />
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">A mix of friends and strangers
                                                                 heading off to find an adventure.</h5>
@@ -404,7 +404,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
                                     </div>
                                     <!-- end row -->
