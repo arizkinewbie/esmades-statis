@@ -13,15 +13,14 @@
                         <div class="card-body">
                            <div class="d-sm-flex">
                               <div class="flex-shrink-0">
-                                 <img src="<?= base_url('dist/') ?>assets/images/small/img-1.jpg" alt="" width="115" class="rounded-1" />
+                                 <img src="https://talagawetan.desa.id/wp-content/uploads/2022/10/20221028_072310_0000-1024x1024.png" alt="" width="115" class="rounded-1" />
                               </div>
                               <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
                                  <ul class="list-inline mb-2 mt-3">
                                     <li class="list-inline-item"><span class="badge bg-success-subtle text-success fs-11">Business</span>
                                     </li>
                                  </ul>
-                                 <h5><a href="javascript:void(0);">A mix of friends and strangers heading off to
-                                       find an adventure</a></h5>
+                                 <h5><a href="javascript:void(0);">Memperingati Sumpah Pemuda</a></h5>
                                  <ul class="list-inline mb-0">
                                     <li class="list-inline-item"><i class="ri-user-3-fill text-success align-middle me-1"></i> James
                                        Ballard</li>
@@ -41,14 +40,14 @@
                         <div class="card-body">
                            <div class="d-sm-flex">
                               <div class="flex-shrink-0">
-                                 <img src="<?= base_url('dist/') ?>assets/images/small/img-2.jpg" alt="" width="115" class="rounded-1" />
+                                 <img src="https://talagawetan.desa.id/wp-content/uploads/2022/09/mudes-rkp-2023-1024x736.jpg" alt="" width="115" class="rounded-1" />
                               </div>
                               <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
                                  <ul class="list-inline mb-2 mt-3">
                                     <li class="list-inline-item"><span class="badge bg-warning-subtle text-warning fs-11">Development</span>
                                     </li>
                                  </ul>
-                                 <h5><a href="javascript:void(0);">How to get creative in your work ?</a></h5>
+                                 <h5><a href="javascript:void(0);">MUSDES Rencana Kerja Pemerintah Desa (RKPDes) Tahun Anggaran 2023</a></h5>
                                  <ul class="list-inline mb-0">
                                     <li class="list-inline-item"><i class="ri-user-3-fill text-success align-middle me-1"></i> Ruby
                                        Griffin</li>
