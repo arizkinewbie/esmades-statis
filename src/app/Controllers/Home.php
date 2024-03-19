@@ -18,9 +18,47 @@ class Home extends BaseController
     {
         //Get DATA from API
         $this->setJwtToken();
-        $dataRequest = [
+        // ambil data profil 
+        $profil = $this->request([
             'method' => 'GET',
             'api_path' => '/api/profil?desa_id=29198',
+        ]);
+        if ($profil->getStatusCode() == 200) {
+            $profil = json_decode($profil->getBody(), true);
+        } else {
+            $profil = [
+                'error' => $profil->getBody(),
+            ];
+        }
+
+        //Path API for Icon Menu
+        if ($path == 'kepala-desa') {
+            $pathAPI = 'kepala_desa'; //
+        } else if ($path == 'struktur-organisasi') {
+            $pathAPI = 'struktur_organisasi'; //
+        } else if ($path == 'kelembagaan') {
+            $pathAPI = 'kelembagaan'; //
+        } else if ($path == 'galeri') {
+            $pathAPI = 'galeri_desa';
+        } else if ($path == 'kabar-desa') {
+            $pathAPI = 'kabar_desa';
+        }
+        // Peta Desa Menu
+        // else if ($path == 'aset-desa') {
+        //     $pathAPI = 'aset_desa';
+        // } else if ($path == 'potensi-desa') {
+        //     $pathAPI = 'potensi_desa';
+        // } else if ($path == 'wisata-desa') {
+        //     $pathAPI = 'wisata';
+        // } 
+        else if ($path == 'peraturan-desa') {
+            $pathAPI = 'peraturan_desa';
+        } else {
+            $pathAPI = 'profil';
+        }
+        $dataRequest = [
+            'method' => 'GET',
+            'api_path' => '/api/' . $pathAPI,
         ];
         $response = $this->request($dataRequest);
         if ($response->getStatusCode() == 200) {
@@ -30,10 +68,16 @@ class Home extends BaseController
                 'error' => $response->getBody(),
             ];
         }
+        if ($path == 'profil') {
+            $title = $profil[0]['nama'] . ' | ' . getenv('APP_NAME');
+        } else {
+            $title = ucwords(str_replace('-', ' ', $path)) . ' | ' . getenv('APP_NAME');
+        }
         $data = [
-            'title' => ucwords(str_replace('-', ' ', $path)) . ' | ' . getenv('APP_NAME'),
+            'title' => $title,
             'content' => $path,
-            'data' => $ContentData,
+            'profile' => $profil,
+            'api' => $ContentData,
         ];
         return $this->render($data);
     }

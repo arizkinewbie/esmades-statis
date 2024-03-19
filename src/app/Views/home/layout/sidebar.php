@@ -21,7 +21,7 @@
                     <div class="mx-auto">
                         <img src="<?= base_url('dist/') ?>assets/images/logo_desa_talaga.png" alt="" width="50px" class="img-thumbnail rounded-circle shadow-none">
                     </div>
-                    <p class="text-light mt-0">Profil Desa <?= $data[0]['nama'] ?></p>
+                    <p class="text-light mt-0">Profil Desa <?= $profile[0]['nama'] ?></p>
                 </a>
 
                 <a href="<?= base_url('kepala-desa') ?>" class="card-body text-center" style="flex:0 0 50%;">
