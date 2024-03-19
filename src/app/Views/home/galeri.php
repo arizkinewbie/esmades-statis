@@ -14,48 +14,65 @@
                                     <div class="text-center card-header">
                                         <ul class="list-inline categories-filter animation-nav" id="filter">
                                             <li class="list-inline-item"><a class="categories active" data-filter="*">All</a></li>
-                                            <li class="list-inline-item"><a class="categories" data-filter=".pembangunan">Pembangunan</a></li>
+                                            <!--<li class="list-inline-item"><a class="categories" data-filter=".pembangunan">Pembangunan</a></li>
                                             <li class="list-inline-item"><a class="categories" data-filter=".project">Project</a></li>
                                             <li class="list-inline-item"><a class="categories" data-filter=".designing">Designing</a></li>
                                             <li class="list-inline-item"><a class="categories" data-filter=".photography">Photography</a></li>
-                                            <li class="list-inline-item"><a class="categories" data-filter=".development">Development</a></li>
+                                            <li class="list-inline-item"><a class="categories" data-filter=".development">Development</a></li> -->
+                                            <?php
+                                            // Loop melalui setiap elemen dalam $value
+                                            foreach ($api as $item) {
+                                                // HTML untuk menampilkan setiap galeri
+                                            ?>
+                                                <li class="list-inline-item"><a class="categories" data-filter=".<?= $item['jenis_galeri'] ?>"><?= $item['jenis_galeri'] ?></a></li>
+                                            <?php
+                                            }
+                                            ?>
                                         </ul>
                                     </div>
 
                                     <div class="row gallery-wrapper mx-2">
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development" data-category="designing development">
-                                            <div class="gallery-box card">
-                                                <div class="gallery-container">
-                                                    <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/hotmik-fajawan-2-438x408.jpg" title="">
-                                                        <img class="gallery-img img-fluid mx-auto" src="https://talagawetan.desa.id/wp-content/uploads/2020/10/hotmik-fajawan-2-438x408.jpg" alt="" />
-                                                        <div class="gallery-overlay">
-                                                            <h5 class="overlay-caption">Hotmik Pajawan
-                                                            </h5>
-                                                        </div>
-                                                    </a>
-                                                </div>
+                                        <?php
+                                        // Loop melalui setiap elemen dalam $value
+                                        foreach ($api as $item) {
+                                            // HTML untuk menampilkan setiap galeri
+                                        ?>
+                                            <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project <?= $item['jenis_galeri'] ?>" data-category="<?= $item['jenis_galeri'] ?>">
+                                                <div class="gallery-box card">
+                                                    <div class="gallery-container">
+                                                        <a class="image-popup" href="<?= base_url($item['file']) ?>" title="<?= $item['keterangan'] ?>">
+                                                            <img class="gallery-img img-fluid mx-auto" src="<?= base_url($item['file']) ?>" alt="<?= $item['keterangan'] ?>" />
+                                                            <div class="gallery-overlay">
+                                                                <h5 class="overlay-caption"><?= $item['keterangan'] ?></h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
 
-                                                <div class="box-content">
-                                                    <div class="d-flex align-items-center mt-1">
-                                                        <div class="flex-grow-1 text-muted">by <a href="" class="text-body text-truncate">Ron Mackie</a></div>
-                                                        <div class="flex-shrink-0">
-                                                            <div class="d-flex gap-3">
-                                                                <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0 material-shadow-none">
-                                                                    <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
-                                                                    2.2K
-                                                                </button>
-                                                                <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0 material-shadow-none">
-                                                                    <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
-                                                                    1.3K
-                                                                </button>
+                                                    <div class="box-content">
+                                                        <div class="d-flex align-items-center mt-1">
+                                                            <div class="flex-grow-1 text-muted">by <a href="" class="text-body text-truncate">Ron Mackie</a></div>
+                                                            <div class="flex-shrink-0">
+                                                                <div class="d-flex gap-3">
+                                                                    <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0 material-shadow-none">
+                                                                        <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
+                                                                        2.2K
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0 material-shadow-none">
+                                                                        <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
+                                                                        1.3K
+                                                                    </button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        <?php
+                                        }
+                                        ?>
+
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
                                                     <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/11/BLT.1-438x408.jpg" title="">
@@ -85,9 +102,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project development" data-category="development">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project development" data-category="development">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
                                                     <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-posyandu2-438x408.jpg" title="">
@@ -116,9 +133,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing pembangunan" data-category="project designing pembangunan">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing pembangunan" data-category="project designing pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
                                                     <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/hotmik-cikirai-1-1-438x408.jpg" title="">
@@ -148,9 +165,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing pembangunan" data-category="project designing pembangunan">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing pembangunan" data-category="project designing pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
                                                     <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-saluran-pasar-2-438x408.jpg" title="">
@@ -179,9 +196,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
                                                     <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/saluran-karanganyar-2-438x408.jpg" title="">
@@ -211,9 +228,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development" data-category="designing development">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development" data-category="designing development">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
                                                     <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-saluran-astana-1-438x408.jpg" title="">
@@ -242,9 +259,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 photography pembangunan" data-category="photography pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
                                                     <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/talagawetan-jalankadawung-1-438x408.jpg" title="">
@@ -274,10 +291,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
 
-                                        <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development pembangunan" data-category="designing development pembangunan">
+                                        <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing development pembangunan" data-category="designing development pembangunan">
                                             <div class="gallery-box card">
                                                 <div class="gallery-container">
                                                     <a class="image-popup" href="https://talagawetan.desa.id/wp-content/uploads/2020/10/jalanbaru-1-1-438x408.jpg" title="">
@@ -307,7 +324,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- end col -->
 
                                         <!-- <div class="element-item col-xxl-3 col-xl-4 col-sm-6 project designing" data-category="project designing">

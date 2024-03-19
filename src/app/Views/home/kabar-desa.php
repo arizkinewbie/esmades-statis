@@ -8,34 +8,51 @@
             </div>
             <div class="card-body">
                <div class="row">
-                  <div class="col-lg-6 mb-4">
-                     <div class="card border">
-                        <div class="card-body">
-                           <div class="d-sm-flex">
-                              <div class="flex-shrink-0">
-                                 <img src="https://talagawetan.desa.id/wp-content/uploads/2022/10/20221028_072310_0000-1024x1024.png" alt="" width="115" class="rounded-1" />
-                              </div>
-                              <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
-                                 <ul class="list-inline mb-2 mt-3">
-                                    <li class="list-inline-item"><span class="badge bg-success-subtle text-success fs-11">Business</span>
-                                    </li>
-                                 </ul>
-                                 <h5><a href="javascript:void(0);">Memperingati Sumpah Pemuda</a></h5>
-                                 <ul class="list-inline mb-0">
-                                    <li class="list-inline-item"><i class="ri-user-3-fill text-success align-middle me-1"></i> James
-                                       Ballard</li>
-                                    <li class="list-inline-item"><i class="ri-calendar-2-fill text-success align-middle me-1"></i> 23
-                                       Nov, 2021</li>
-                                 </ul>
+
+                  <?php
+                  // Contoh, asumsikan $api sudah berisi semua data berita yang dibutuhkan
+                  // Loop melalui setiap berita
+                  for ($i = 0; $i < count($api); $i++) {
+                     // Decode JSON string menjadi array
+                     $fotoArray = json_decode($api[$i]['foto'], true);
+                     // Cek apakah fotoArray adalah array dan memiliki setidaknya satu item
+                     if (is_array($fotoArray) && count($fotoArray) > 0) {
+                        // Tentukan indeks foto berdasarkan iterasi loop, mod dengan jumlah total foto untuk menghindari index out of bounds
+                        $fotoIndex = $i % count($fotoArray);
+                        $foto = $fotoArray[$fotoIndex]; // Ambil foto berdasarkan indeks yang ditentukan
+
+                        // HTML untuk menampilkan berita dan foto
+                  ?>
+                        <div class="col-lg-6 mb-4">
+                           <div class="card border">
+                              <div class="card-body">
+                                 <div class="d-sm-flex">
+                                    <div class="flex-shrink-0">
+                                       <img src="<?= base_url($foto['path_file']) ?>" alt="Foto Berita" width="115" class="rounded-1" />
+                                    </div>
+                                    <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
+                                       <ul class="list-inline mb-2 mt-3">
+                                          <li class="list-inline-item"><span class="badge bg-success-subtle text-success fs-11"><?= $api[$i]['jenis_berita'] ?></span></li>
+                                       </ul>
+                                       <h5><a href="javascript:void(0);"><?= $api[$i]['judul_berita'] ?></a></h5>
+                                       <ul class="list-inline mb-0">
+                                          <li class="list-inline-item"><i class="ri-user-3-fill text-success align-middle me-1"></i> James Ballard</li>
+                                          <li class="list-inline-item"><i class="ri-calendar-2-fill text-success align-middle me-1"></i><?= $api[$i]['created_at'] ?></li>
+                                       </ul>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
                         </div>
-                     </div>
-                     <!--end card-->
-                  </div>
+                  <?php
+                     }
+                  }
+                  ?>
+
+
                   <!--end col-->
 
-                  <div class="col-lg-6 mb-4">
+                  <!-- <div class="col-lg-6 mb-4">
                      <div class="card border">
                         <div class="card-body">
                            <div class="d-sm-flex">
@@ -58,38 +75,10 @@
                            </div>
                         </div>
                      </div>
-                     <!--end card-->
-                  </div>
+                  </div> -->
                   <!--end col-->
 
-                  <div class="col-lg-6 mb-4">
-                     <div class="card border">
-                        <div class="card-body">
-                           <div class="d-sm-flex">
-                              <div class="flex-shrink-0">
-                                 <img src="<?= base_url('dist/') ?>assets/images/small/img-3.jpg" alt="" width="115" class="rounded-1" />
-                              </div>
-                              <div class="flex-grow-1 ms-sm-4 mt-3 mt-sm-0">
-                                 <ul class="list-inline mb-2 mt-3">
-                                    <li class="list-inline-item"><span class="badge bg-info-subtle text-info fs-11">Fashion</span></li>
-                                 </ul>
-                                 <h5><a href="javascript:void(0);">How to become a best sale marketer in a
-                                       year!</a></h5>
-                                 <ul class="list-inline mb-0">
-                                    <li class="list-inline-item"><i class="ri-user-3-fill text-success align-middle me-1"></i> Elwood
-                                       Arter</li>
-                                    <li class="list-inline-item"><i class="ri-calendar-2-fill text-success align-middle me-1"></i> 23
-                                       Nov, 2021</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!--end card-->
-                  </div>
-                  <!--end col-->
-
-                  <div class="col-lg-6 mb-4">
+                  <!-- <div class="col-lg-6 mb-4">
                      <div class="card border">
                         <div class="card-body">
                            <div class="d-sm-flex">
@@ -113,11 +102,10 @@
                            </div>
                         </div>
                      </div>
-                     <!--end card-->
-                  </div>
+                  </div> -->
                   <!--end col-->
 
-                  <div class="col-lg-6 mb-4">
+                  <!-- <div class="col-lg-6 mb-4">
                      <div class="card border">
                         <div class="card-body">
                            <div class="d-sm-flex">
@@ -141,11 +129,10 @@
                            </div>
                         </div>
                      </div>
-                     <!--end card-->
-                  </div>
+                  </div> -->
                   <!--end col-->
 
-                  <div class="col-lg-6 mb-4">
+                  <!-- <div class="col-lg-6 mb-4">
                      <div class="card border">
                         <div class="card-body">
                            <div class="d-sm-flex">
@@ -168,11 +155,10 @@
                            </div>
                         </div>
                      </div>
-                     <!--end card-->
-                  </div>
+                  </div> -->
                   <!--end col-->
 
-                  <div class="col-lg-6 mb-4">
+                  <!-- <div class="col-lg-6 mb-4">
                      <div class="card border">
                         <div class="card-body">
                            <div class="d-sm-flex">
@@ -194,11 +180,10 @@
                            </div>
                         </div>
                      </div>
-                     <!--end card-->
-                  </div>
+                  </div> -->
                   <!--end col-->
 
-                  <div class="col-lg-6 mb-4">
+                  <!-- <div class="col-lg-6 mb-4">
                      <div class="card border">
                         <div class="card-body">
                            <div class="d-sm-flex">
@@ -221,9 +206,9 @@
                            </div>
                         </div>
                      </div>
-                     <!--end card-->
-                  </div>
+                  </div> -->
                   <!--end col-->
+
                </div>
                <!--end row-->
 
