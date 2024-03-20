@@ -52,7 +52,7 @@
                                     <h5 class="modal-title" id="modalFullScreenLabel<?= $i ?>"><?= $api[$i]['judul_berita'] ?></h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                  </div>
-                                 <div class="modal-body">
+                                 <div class="modal-body" style="max-height: calc(100vh - 210px); overflow-y: auto;">>
                                     <img src="<?= base_url($foto['path_file']) ?>" alt="Foto Berita" width="100%" />
                                     <div class="d-flex">
                                        <div class="flex-grow-1 ms-2">
