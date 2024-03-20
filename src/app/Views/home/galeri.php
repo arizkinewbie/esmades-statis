@@ -50,17 +50,17 @@
 
                                                     <div class="box-content">
                                                         <div class="d-flex align-items-center mt-1">
-                                                            <div class="flex-grow-1 text-muted">by <a href="" class="text-body text-truncate">Ron Mackie</a></div>
+                                                            <div class="flex-grow-1 text-muted">Diposting pada <a href="" class="text-body text-truncate"><?= $item['created_at'] ?></a></div>
                                                             <div class="flex-shrink-0">
                                                                 <div class="d-flex gap-3">
-                                                                    <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0 material-shadow-none">
+                                                                    <!-- <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0 material-shadow-none">
                                                                         <i class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                         2.2K
                                                                     </button>
                                                                     <button type="button" class="btn btn-sm fs-12 btn-link text-body text-decoration-none px-0 material-shadow-none">
                                                                         <i class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                         1.3K
-                                                                    </button>
+                                                                    </button> -->
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -35,7 +35,7 @@
                                        </ul>
                                        <h5><a href="javascript:void(0);"><?= $api[$i]['judul_berita'] ?></a></h5>
                                        <ul class="list-inline mb-0">
-                                          <li class="list-inline-item"><i class="ri-user-3-fill text-success align-middle me-1"></i> James Ballard</li>
+                                          <!-- <li class="list-inline-item"><i class="ri-user-3-fill text-success align-middle me-1"></i> James Ballard</li> -->
                                           <li class="list-inline-item"><i class="ri-calendar-2-fill text-success align-middle me-1"></i><?= $api[$i]['created_at'] ?></li>
                                        </ul>
                                     </div>
@@ -49,28 +49,16 @@
                            <div class="modal-dialog modal-xl modal-dialog-scrollable">
                               <div class="modal-content">
                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="modalFullScreenLabel<?= $i ?>">Full Screen Modal</h5>
+                                    <h5 class="modal-title" id="modalFullScreenLabel<?= $i ?>"><?= $api[$i]['judul_berita'] ?></h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                  </div>
                                  <div class="modal-body">
-                                    <h6 class="fs-15">Sejarah</h6>
+                                    <img src="<?= base_url($foto['path_file']) ?>" alt="Foto Berita" width="100%" />
                                     <div class="d-flex">
                                        <div class="flex-grow-1 ms-2">
                                           <p class="text-muted mb-0">
-                                             <?= $profile[0]['sejarah'] ?>
+                                             <?= $api[$i]['isi_berita'] ?>
                                           </p>
-                                       </div>
-                                    </div>
-                                    <h6 class="fs-16 my-3">Visi</h6>
-                                    <div class="d-flex mt-3">
-                                       <div class="flex-grow-1 ms-2 ">
-                                          <p class="text-muted mb-0"><?= $profile[0]['visi'] ?>
-                                       </div>
-                                    </div>
-                                    <h6 class="fs-16 my-3">Misi</h6>
-                                    <div class="d-flex mt-3">
-                                       <div class="flex-grow-1 ms-2 ">
-                                          <p class="text-muted mb-0"><?= $profile[0]['misi'] ?>
                                        </div>
                                     </div>
                                  </div>
