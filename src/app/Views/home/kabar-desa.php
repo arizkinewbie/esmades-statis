@@ -10,7 +10,6 @@
                <div class="row">
 
                   <?php
-                  // Contoh, asumsikan $api sudah berisi semua data berita yang dibutuhkan
                   // Loop melalui setiap berita
                   for ($i = 0; $i < count($api); $i++) {
                      // Decode JSON string menjadi array
@@ -25,7 +24,7 @@
                   ?>
                         <div class="col-lg-6 mb-4">
                            <div class="card border">
-                              <div class="card-body">
+                              <div class="card-body" data-bs-toggle="modal" data-bs-target="#modalFullScreen<?= $i ?>">
                                  <div class="d-sm-flex">
                                     <div class="flex-shrink-0">
                                        <img src="<?= base_url($foto['path_file']) ?>" alt="Foto Berita" width="115" class="rounded-1" />
@@ -44,10 +43,48 @@
                               </div>
                            </div>
                         </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade flip modalFullScreen" id="modalFullScreen<?= $i ?>" tabindex="-1" aria-labelledby="modalFullScreenLabel<?= $i ?>" aria-hidden="true">
+                           <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title" id="modalFullScreenLabel<?= $i ?>">Full Screen Modal</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <h6 class="fs-15">Sejarah</h6>
+                                    <div class="d-flex">
+                                       <div class="flex-grow-1 ms-2">
+                                          <p class="text-muted mb-0">
+                                             <?= $profile[0]['sejarah'] ?>
+                                          </p>
+                                       </div>
+                                    </div>
+                                    <h6 class="fs-16 my-3">Visi</h6>
+                                    <div class="d-flex mt-3">
+                                       <div class="flex-grow-1 ms-2 ">
+                                          <p class="text-muted mb-0"><?= $profile[0]['visi'] ?>
+                                       </div>
+                                    </div>
+                                    <h6 class="fs-16 my-3">Misi</h6>
+                                    <div class="d-flex mt-3">
+                                       <div class="flex-grow-1 ms-2 ">
+                                          <p class="text-muted mb-0"><?= $profile[0]['misi'] ?>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <a href="javascript:void(0);" class="btn btn-link link-success fw-medium material-shadow-none" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                                 </div>
+                              </div><!-- /.modal-content -->
+                           </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
                   <?php
                      }
                   }
                   ?>
+
 
 
                   <!--end col-->
@@ -212,9 +249,9 @@
                </div>
                <!--end row-->
 
-               <div class="text-center mt-3 mb-4">
+               <!-- <div class="text-center mt-3 mb-4">
                   <a href="javascript:void(0);" class="text-success material-shadow-none"><i class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i> Muat Lebih Banyak </a>
-               </div>
+               </div> -->
             </div>
          </div>
       </div>
