@@ -33,7 +33,7 @@ class Home extends BaseController
 
         //Path API for Icon Menu
         if ($path == 'kepala-desa') {
-            $pathAPI = 'kepala_desa'; //
+            $pathAPI = 'profil_kepala_desa/show'; //http://api.esmades.id:80/api/profil_kepala_desa/show
         } else if ($path == 'struktur-organisasi') {
             $pathAPI = 'struktur_organisasi'; //
         } else if ($path == 'kelembagaan') {
@@ -54,7 +54,7 @@ class Home extends BaseController
         else if ($path == 'peraturan-desa') {
             $pathAPI = 'peraturan_desa';
         } else {
-            $pathAPI = 'profil';
+            $pathAPI = 'profil?desa_id='. getenv('DESA_ID');
         }
         $dataRequest = [
             'method' => 'GET',
