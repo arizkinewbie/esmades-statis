@@ -114,17 +114,7 @@
                                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body ms-2 ps-5">
-                                                        In an awareness campaign, it is vital for people to begin put 2
-                                                        and 2
-                                                        together and begin to recognize your cause. Too much or too
-                                                        little
-                                                        spacing, as in the example below, can make things unpleasant for
-                                                        the
-                                                        reader. The goal is to make your text as comfortable to read as
-                                                        possible. A wonderful serenity has taken possession of my entire
-                                                        soul,
-                                                        like these sweet mornings of spring which I enjoy with my whole
-                                                        heart.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
                                                     </div>
                                                 </div>
                                             </div>
@@ -151,20 +141,10 @@
                                                 <div id="collapseTwo" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body ms-2 ps-5">
-                                                        In an awareness campaign, it is vital for people to begin put 2
-                                                        and 2
-                                                        together and begin to recognize your cause. Too much or too
-                                                        little
-                                                        spacing, as in the example below, can make things unpleasant for
-                                                        the
-                                                        reader. The goal is to make your text as comfortable to read as
-                                                        possible. A wonderful serenity has taken possession of my entire
-                                                        soul,
-                                                        like these sweet mornings of spring which I enjoy with my whole
-                                                        heart.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
                                                     </div>
                                                 </div>
-                                            </div>
+                                                </div>
                                             <div class="accordion-item border-0">
                                                 <div class="accordion-header" id="headingThree">
                                                     <a class="accordion-button p-2 shadow-none"
@@ -188,17 +168,7 @@
                                                 <div id="collapseThree" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body ms-2 ps-5">
-                                                        In an awareness campaign, it is vital for people to begin put 2
-                                                        and 2
-                                                        together and begin to recognize your cause. Too much or too
-                                                        little
-                                                        spacing, as in the example below, can make things unpleasant for
-                                                        the
-                                                        reader. The goal is to make your text as comfortable to read as
-                                                        possible. A wonderful serenity has taken possession of my entire
-                                                        soul,
-                                                        like these sweet mornings of spring which I enjoy with my whole
-                                                        heart.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
                                                     </div>
                                                 </div>
                                             </div>
@@ -225,17 +195,7 @@
                                                 <div id="collapseFour" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body ms-2 ps-5">
-                                                        In an awareness campaign, it is vital for people to begin put 2
-                                                        and 2
-                                                        together and begin to recognize your cause. Too much or too
-                                                        little
-                                                        spacing, as in the example below, can make things unpleasant for
-                                                        the
-                                                        reader. The goal is to make your text as comfortable to read as
-                                                        possible. A wonderful serenity has taken possession of my entire
-                                                        soul,
-                                                        like these sweet mornings of spring which I enjoy with my whole
-                                                        heart.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
                                                     </div>
                                                 </div>
                                             </div>
@@ -245,7 +205,7 @@
                                 </div>
                             </div>
                             <div class="tab-content">
-                                <div class="tab-pane active" id="riwayatJabatan" role="tabpanel">
+                                <div class="tab-pane" id="riwayatJabatan" role="tabpanel">
                                     <div class="profile-timeline">
                                         <div class="accordion accordion-flush" id="riwayat_Jabatan">
                                             <div class="accordion-item border-0">
@@ -272,17 +232,7 @@
                                                 <div id="collapseFive" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body ms-2 ps-5">
-                                                        In an awareness campaign, it is vital for people to begin put 2
-                                                        and 2
-                                                        together and begin to recognize your cause. Too much or too
-                                                        little
-                                                        spacing, as in the example below, can make things unpleasant for
-                                                        the
-                                                        reader. The goal is to make your text as comfortable to read as
-                                                        possible. A wonderful serenity has taken possession of my entire
-                                                        soul,
-                                                        like these sweet mornings of spring which I enjoy with my whole
-                                                        heart.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
                                                     </div>
                                                 </div>
                                             </div>
@@ -310,17 +260,7 @@
                                                 <div id="collapseSix" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body ms-2 ps-5">
-                                                        In an awareness campaign, it is vital for people to begin put 2
-                                                        and 2
-                                                        together and begin to recognize your cause. Too much or too
-                                                        little
-                                                        spacing, as in the example below, can make things unpleasant for
-                                                        the
-                                                        reader. The goal is to make your text as comfortable to read as
-                                                        possible. A wonderful serenity has taken possession of my entire
-                                                        soul,
-                                                        like these sweet mornings of spring which I enjoy with my whole
-                                                        heart.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
                                                     </div>
                                                 </div>
                                             </div>
