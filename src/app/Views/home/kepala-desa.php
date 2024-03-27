@@ -14,12 +14,12 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <div class="profile-user position-relative d-inline-block mx-auto  mb-4">
-                                    <img src="<?= base_url('dist/') ?>assets/images/menu/kepala-desa.jpg"
+                                    <img src="<?= $api['informasi']['url_foto'] ?>"
                                         class="rounded-circle avatar-xl img-thumbnail user-profile-image material-shadow"
                                         alt="user-profile-image">
                                 </div>
-                                <h5 class="fs-16 mb-1">$Nama</h5>
-                                <p class="text-muted mb-0">Kepala Desa $kepala_desa</p>
+                                <h5 class="fs-16 mb-1"><?= $api['informasi']['nama'] ?></h5>
+                                <!-- <p class="text-muted mb-0">Kepala Desa </p> -->
                             </div>
                         </div>
                     </div>
@@ -36,73 +36,37 @@
                                 <div class="mb-3">
                                     <label for="" class="form-label">Tempat, Tanggal Lahir:</label>
                                     <input type="text" class="form-control bg-transparent" id="" disabled
-                                        placeholder="$tempat_lahir, $tanggal_lahir">
+                                        placeholder="<?= $api['informasi']['tempat_lahir'] ?>, <?= $api['informasi']['tanggal_lahir']?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Alamat:</label>
                                     <input type="text" class="form-control bg-transparent" id="" disabled
-                                        placeholder="$alamat">
+                                        placeholder="<?= $api['informasi']['alamat'] ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Status Perkawinan:</label>
                                     <input type="text" class="form-control bg-transparent" id="" disabled
-                                        placeholder="$status_perkawinan">
+                                        placeholder="<?= $api['informasi']['status_perkawinan'] ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">No. Telepon:</label>
                                     <input type="text" class="form-control bg-transparent" id="" disabled
-                                        placeholder="$no_telepon">
+                                        placeholder="<?= $api['informasi']['telepon'] ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Kewarganegaraan:</label>
                                     <input type="text" class="form-control bg-transparent" id="" disabled
-                                        placeholder="$kewarganegaraan">
+                                        placeholder="<?= $api['informasi']['kewarganegaraan'] ?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Agama:</label>
                                     <input type="text" class="form-control bg-transparent" id="" disabled
-                                        placeholder="$agama">
+                                        placeholder="<?= $api['informasi']['agama_nama'] ?>">
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <!--end card-->
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">Profil</h5>
-                            <div class="table-responsive">
-                                <table class="table table-borderless mb-0">
-                                    <tbody>
-                                        <tr>
-                                            <th class="ps-0" scope="row">Tempat, Tanggal Lahir :</th>
-                                            <td class="text-muted">Jakarta, 10 Juni 1966</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="ps-0" scope="row">Alamat :</th>
-                                            <td class="text-muted">JL. Juanda 1</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="ps-0" scope="row">Status Perkawinan :</th>
-                                            <td class="text-muted">Sudah Menikah</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="ps-0" scope="row">No. Telepon :</th>
-                                            <td class="text-muted">089776524521
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th class="ps-0" scope="row">Kewarganegaraan :</th>
-                                            <td class="text-muted">WNI</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="ps-0" scope="row">Agama :</th>
-                                            <td class="text-muted">Islam</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div><!-- end card body -->
-                    </div><!-- end card -->
+                    <!-- end card -->
                 </div>
                 <!--end col-->
                 <div class="col-xxl-9">
