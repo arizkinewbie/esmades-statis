@@ -86,14 +86,19 @@ $api['informasi']['periode'] = '2020-2025';
 								<div class="tab-pane active" id="riwayatPendidikan" role="tabpanel">
 									<div class="profile-timeline">
 										<div class="accordion accordion-flush" id="riwayat_Pendidikan">
-											<?php foreach ($api['pendidikan'] as $key => $value): ?>
+											<?php
+												$keys = array_keys($api['pendidikan']);
+												$last = end($keys);
+												krsort($api['pendidikan'], SORT_REGULAR);
+												foreach ($api['pendidikan'] as $key => $value): 
+                                            ?>
 											<div class="accordion-item border-0">
 												<div class="accordion-header" id="heading<?= $key + 1 ?>">
 													<a class="accordion-button p-2 shadow-none" data-bs-toggle="collapse" href="#collapse<?= $key + 1 ?>" aria-expanded="true">
 														<div class="d-flex">
 															<div class="flex-shrink-0 avatar-xs">
 																<div class="avatar-title bg-light text-success rounded-circle material-shadow">
-																	</div>
+																		</div>
 															</div>
 															<div class="flex-grow-1 ms-3">
 																<h6 class="fs-14 mb-1">
@@ -104,7 +109,7 @@ $api['informasi']['periode'] = '2020-2025';
 														</div>
 													</a>
 												</div>
-												<div id="collapse<?= $key + 1 ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?= $key + 1 ?>" data-bs-parent="#riwayat_Pendidikan">
+												<div id="collapse<?= $key + 1 ?>" class="accordion-collapse collapse<?= $key == $last ? ' show' : '' ?>" aria-labelledby="heading<?= $key + 1 ?>" data-bs-parent="#riwayat_Pendidikan">
 													<div class="accordion-body ms-2 ps-5">
                                                     ($value['keterangan']=>masih statis, tidak ada di API) Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolore sunt molestiae maiores adipisci veritatis sapiente est tenetur atque explicabo quibusdam, voluptates nobis. Eaque aliquid sit, quos facere magnam neque?
 													</div>
