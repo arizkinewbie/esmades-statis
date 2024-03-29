@@ -1,6 +1,7 @@
 <?php
 // STATIS DATA! INGATKAN API UNTUK MENAMBAHKAN URL_SURAT
 $api['informasi']['url_surat'] = 'https://jdih.batangkab.go.id/file/desa/surat-keputusan-kepala-desa-no-2-tentang-surat-keputusan-kepala-desa.pdf';
+$api['informasi']['periode'] = '2020-2025';
 ?>
 
 <div class="main-content">
@@ -20,7 +21,7 @@ $api['informasi']['url_surat'] = 'https://jdih.batangkab.go.id/file/desa/surat-k
 									<img src="<?= $api['informasi']['url_foto'] ?>" class="rounded-circle avatar-xl img-thumbnail user-profile-image material-shadow" alt="user-profile-image">
 								</div>
 								<h5 class="fs-16 mb-1"><?= $api['informasi']['nama'] ?></h5>
-								<!-- <p class="text-muted mb-0">Kepala Desa </p> -->
+								<p class="text-muted mb-0"><?= $api['informasi']['periode'] ?></p>
 							</div>
 						</div>
 					</div>
@@ -85,98 +86,31 @@ $api['informasi']['url_surat'] = 'https://jdih.batangkab.go.id/file/desa/surat-k
 								<div class="tab-pane active" id="riwayatPendidikan" role="tabpanel">
 									<div class="profile-timeline">
 										<div class="accordion accordion-flush" id="riwayat_Pendidikan">
+											<?php foreach ($api['pendidikan'] as $key => $value): ?>
 											<div class="accordion-item border-0">
-												<div class="accordion-header" id="headingOne">
-													<a class="accordion-button p-2 shadow-none" data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true">
+												<div class="accordion-header" id="heading<?= $key + 1 ?>">
+													<a class="accordion-button p-2 shadow-none" data-bs-toggle="collapse" href="#collapse<?= $key + 1 ?>" aria-expanded="true">
 														<div class="d-flex">
 															<div class="flex-shrink-0 avatar-xs">
 																<div class="avatar-title bg-light text-success rounded-circle material-shadow">
-																</div>
+																	</div>
 															</div>
 															<div class="flex-grow-1 ms-3">
 																<h6 class="fs-14 mb-1">
-																	1990-1996
+																	<?= $value['periode'] ?>
 																</h6>
-																<small class="text-muted">SD Talaga Wetan 1</small>
+																<small class="text-muted"><?= $value['pendidikan'] ?></small>
 															</div>
 														</div>
 													</a>
 												</div>
-												<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+												<div id="collapse<?= $key + 1 ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?= $key + 1 ?>" data-bs-parent="#riwayat_Pendidikan">
 													<div class="accordion-body ms-2 ps-5">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
+                                                    ($value['keterangan']=>masih statis, tidak ada di API) Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolore sunt molestiae maiores adipisci veritatis sapiente est tenetur atque explicabo quibusdam, voluptates nobis. Eaque aliquid sit, quos facere magnam neque?
 													</div>
 												</div>
 											</div>
-											<div class="accordion-item border-0">
-												<div class="accordion-header" id="headingTwo">
-													<a class="accordion-button p-2 shadow-none" data-bs-toggle="collapse" href="#collapseTwo" aria-expanded="false">
-														<div class="d-flex">
-															<div class="flex-shrink-0 avatar-xs">
-																<div class="avatar-title bg-light text-success rounded-circle material-shadow">
-																</div>
-															</div>
-															<div class="flex-grow-1 ms-3">
-																<h6 class="fs-14 mb-1">
-																	1996-1999
-																</h6>
-																<small class="text-muted">SMPN Talaga 1</small>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-													<div class="accordion-body ms-2 ps-5">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
-													</div>
-												</div>
-											</div>
-											<div class="accordion-item border-0">
-												<div class="accordion-header" id="headingThree">
-													<a class="accordion-button p-2 shadow-none" data-bs-toggle="collapse" href="#collapseThree" aria-expanded="false">
-														<div class="d-flex">
-															<div class="flex-shrink-0 avatar-xs">
-																<div class="avatar-title bg-light text-success rounded-circle material-shadow">
-																</div>
-															</div>
-															<div class="flex-grow-1 ms-3">
-																<h6 class="fs-14 mb-1">
-																	1999-2002
-																</h6>
-																<small class="text-muted">SMAN 1 Talaga</small>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-													<div class="accordion-body ms-2 ps-5">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
-													</div>
-												</div>
-											</div>
-											<div class="accordion-item border-0">
-												<div class="accordion-header" id="headingFour">
-													<a class="accordion-button p-2 shadow-none" data-bs-toggle="collapse" href="#collapseFour" aria-expanded="false">
-														<div class="d-flex">
-															<div class="flex-shrink-0 avatar-xs">
-																<div class="avatar-title bg-light text-success rounded-circle material-shadow">
-																</div>
-															</div>
-															<div class="flex-grow-1 ms-3">
-																<h6 class="fs-14 mb-1">
-																	2002-2007
-																</h6>
-																<small class="text-muted">Universitas Majalengka</small>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-													<div class="accordion-body ms-2 ps-5">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquam facilis culpa dignissimos accusamus odio delectus non? Quibusdam architecto, itaque porro, recusandae, distinctio esse voluptatum asperiores soluta atque deleniti inventore.
-													</div>
-												</div>
-											</div>
+											<?php endforeach ?>
 											<!--end accordion-->
 										</div>
 									</div>
