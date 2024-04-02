@@ -120,15 +120,13 @@
 								<div class="tab-pane" id="suratPengangkatan" role="tabpanel">
 									<div class="profile-timeline">
 										<div class="accordion accordion-flush" id="surat_Pengangkatan">
-											<div class="accordion-item border-0">
-												<div id="collapseSuratPengangkatan" class="accordion-collapse collapse show" aria-labelledby="headingSuratPengangkatan" data-bs-parent="#surat_Pengangkatan">
-													<div class="accordion-body ms-2 ps-2">
-														<?php if (filter_var($api['informasi']['url_surat_pengangkatan'], FILTER_VALIDATE_URL) === FALSE) : ?>
-															<p class="text-center text-muted">Data tidak ditemukan</p>
-														<?php else : ?>
-															<iframe src="<?= $api['informasi']['url_surat_pengangkatan'] ?>" width="100%" height="600px"></iframe>
-														<?php endif; ?>
-													</div>
+											<div id="collapseSuratPengangkatan" class="accordion-collapse collapse show" aria-labelledby="headingSuratPengangkatan" data-bs-parent="#surat_Pengangkatan">
+												<div class="accordion-body ms-2 ps-2">
+													<?php if (filter_var($api['informasi']['url_surat_pengangkatan'], FILTER_VALIDATE_URL) === FALSE) : ?>
+														<p class="text-center text-muted">Data tidak ditemukan</p>
+													<?php else : ?>
+														<iframe src="<?= $api['informasi']['url_surat_pengangkatan'] ?>" width="100%" height="600px"></iframe>
+													<?php endif; ?>
 												</div>
 											</div>
 										</div>
