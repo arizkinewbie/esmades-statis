@@ -1,9 +1,3 @@
-<?php
-// STATIS DATA! INGATKAN API UNTUK MENAMBAHKAN URL_SURAT
-$api['informasi']['url_surat'] = 'https://jdih.batangkab.go.id/file/desa/surat-keputusan-kepala-desa-no-2-tentang-surat-keputusan-kepala-desa.pdf';
-$api['informasi']['periode'] = '2020-2025';
-?>
-
 <div class="main-content">
 	<div class="page-content">
 		<div class="container-fluid">
@@ -21,7 +15,8 @@ $api['informasi']['periode'] = '2020-2025';
 									<img src="<?= $api['informasi']['url_foto'] ?>" class="rounded-circle avatar-xl img-thumbnail user-profile-image material-shadow" alt="user-profile-image">
 								</div>
 								<h5 class="fs-16 mb-1"><?= $api['informasi']['nama'] ?></h5>
-								<p class="text-muted mb-0"><?= $api['informasi']['periode'] ?></p>
+								<p class="text-muted mb-0" title="NIPB">(<?= $api['informasi']['nipb'] ?>)</p>
+								<p class="text-muted mb-0" title="Periode Jabatan"><?= $api['informasi']['periode_jabatan_awal'] ?> - <?= $api['informasi']['periode_jabatan_akhir'] ?></p>
 							</div>
 						</div>
 					</div>
@@ -87,34 +82,34 @@ $api['informasi']['periode'] = '2020-2025';
 									<div class="profile-timeline">
 										<div class="accordion accordion-flush" id="riwayat_Pendidikan">
 											<?php
-												$keys = array_keys($api['pendidikan']);
-												$last = end($keys);
-												krsort($api['pendidikan'], SORT_REGULAR);
-												foreach ($api['pendidikan'] as $key => $value): 
-                                            ?>
-											<div class="accordion-item border-0">
-												<div class="accordion-header" id="heading<?= $key + 1 ?>">
-													<a class="accordion-button p-2 shadow-none" data-bs-toggle="collapse" href="#collapse<?= $key + 1 ?>" aria-expanded="true">
-														<div class="d-flex">
-															<div class="flex-shrink-0 avatar-xs">
-																<div class="avatar-title bg-light text-success rounded-circle material-shadow">
-																		</div>
+											$keys = array_keys($api['pendidikan']);
+											$last = end($keys);
+											krsort($api['pendidikan'], SORT_REGULAR);
+											foreach ($api['pendidikan'] as $key => $value) :
+											?>
+												<div class="accordion-item border-0">
+													<div class="accordion-header" id="heading<?= $key + 1 ?>">
+														<a class="accordion-button p-2 shadow-none" data-bs-toggle="collapse" href="#collapse<?= $key + 1 ?>" aria-expanded="true">
+															<div class="d-flex">
+																<div class="flex-shrink-0 avatar-xs">
+																	<div class="avatar-title bg-light text-success rounded-circle material-shadow">
+																	</div>
+																</div>
+																<div class="flex-grow-1 ms-3">
+																	<h6 class="fs-14 mb-1">
+																		<?= $value['periode'] ?>
+																	</h6>
+																	<small class="text-muted"><?= $value['pendidikan'] ?></small>
+																</div>
 															</div>
-															<div class="flex-grow-1 ms-3">
-																<h6 class="fs-14 mb-1">
-																	<?= $value['periode'] ?>
-																</h6>
-																<small class="text-muted"><?= $value['pendidikan'] ?></small>
-															</div>
+														</a>
+													</div>
+													<div id="collapse<?= $key + 1 ?>" class="accordion-collapse collapse<?= $key == $last ? ' show' : '' ?>" aria-labelledby="heading<?= $key + 1 ?>" data-bs-parent="#riwayat_Pendidikan">
+														<div class="accordion-body ms-2 ps-5">
+															($value['keterangan']=>masih statis, tidak ada di API) Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolore sunt molestiae maiores adipisci veritatis sapiente est tenetur atque explicabo quibusdam, voluptates nobis. Eaque aliquid sit, quos facere magnam neque?
 														</div>
-													</a>
-												</div>
-												<div id="collapse<?= $key + 1 ?>" class="accordion-collapse collapse<?= $key == $last ? ' show' : '' ?>" aria-labelledby="heading<?= $key + 1 ?>" data-bs-parent="#riwayat_Pendidikan">
-													<div class="accordion-body ms-2 ps-5">
-                                                    ($value['keterangan']=>masih statis, tidak ada di API) Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolore sunt molestiae maiores adipisci veritatis sapiente est tenetur atque explicabo quibusdam, voluptates nobis. Eaque aliquid sit, quos facere magnam neque?
 													</div>
 												</div>
-											</div>
 											<?php endforeach ?>
 											<!--end accordion-->
 										</div>
@@ -128,7 +123,11 @@ $api['informasi']['periode'] = '2020-2025';
 											<div class="accordion-item border-0">
 												<div id="collapseSuratPengangkatan" class="accordion-collapse collapse show" aria-labelledby="headingSuratPengangkatan" data-bs-parent="#surat_Pengangkatan">
 													<div class="accordion-body ms-2 ps-2">
-														<iframe src="<?= $api['informasi']['url_surat'] ?>" width="100%" height="600px"></iframe>
+														<?php if (filter_var($api['informasi']['url_surat_pengangkatan'], FILTER_VALIDATE_URL) === FALSE) : ?>
+															<p class="text-center text-muted">Data tidak ditemukan</p>
+														<?php else : ?>
+															<iframe src="<?= $api['informasi']['url_surat_pengangkatan'] ?>" width="100%" height="600px"></iframe>
+														<?php endif; ?>
 													</div>
 												</div>
 											</div>
