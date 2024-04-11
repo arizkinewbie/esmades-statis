@@ -2,11 +2,11 @@
 
 ### ICON
 
-1. **Profil Desa**
+1. **Profil Desa** ✅
 
    - Berisi profil, sejarah, dan visi/misi desa.
 
-2. **Kepala Desa**
+2. **Kepala Desa** ✅
 
    - Profil kepala desa.
 
@@ -19,11 +19,11 @@
 
    - Setiap icon bisa di klik dan berisi informasi kelembagaan beserta struktur organisasinya.
 
-5. **Galeri**
+5. **Galeri** ✅
 
    - Informasi foto kegiatan desa.
 
-6. **Kabar Desa**
+6. **Kabar Desa** ✅
    - Informasi/berita kegiatan desa.
 
 ### MENU
