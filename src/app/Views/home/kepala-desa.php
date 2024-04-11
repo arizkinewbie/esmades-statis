@@ -106,7 +106,7 @@
 													</div>
 													<div id="collapse<?= $key + 1 ?>" class="accordion-collapse collapse<?= $key == $last ? ' show' : '' ?>" aria-labelledby="heading<?= $key + 1 ?>" data-bs-parent="#riwayat_Pendidikan">
 														<div class="accordion-body ms-2 ps-5">
-															($value['keterangan']=>masih statis, tidak ada di API) Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolore sunt molestiae maiores adipisci veritatis sapiente est tenetur atque explicabo quibusdam, voluptates nobis. Eaque aliquid sit, quos facere magnam neque?
+															<?= $value['keterangan'] ?>
 														</div>
 													</div>
 												</div>
