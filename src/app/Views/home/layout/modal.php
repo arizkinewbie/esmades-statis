@@ -17,9 +17,34 @@
                 </div>
                 <h6 class="fs-16 my-3">Struktur Organisasi</h6>
                 <div class="d-flex mt-3">
-                    <div class="flex-grow-1 ms-2 ">
-                        <img src="https://asset.kompas.com/crops/7fAEg0knuiNvwiSEWFgv9UxOKCc=/0x48:1024x730/750x500/data/photo/2022/06/04/629b54ac4d4ba.png" width="500" />
+                    <!-- Tampilan tabel -->
+                    <div class="card-body">
+                        <table id="scroll-horizontal" class="table nowrap align-middle" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th class="w-30">Nama Barang</th>
+                                    <th>Kode Barang</th>
+                                    <th>Register</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Laptop ASUS</td>
+                                    <td>3070102</td>
+                                    <td>3070102 | 00001</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Kantor Desa</td>
+                                    <td>3070102</td>
+                                    <td>3070102 | 00001</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
                 </div>
             </div>
             <div class="modal-footer">
